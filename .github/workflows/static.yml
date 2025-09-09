@@ -2,7 +2,7 @@ name: Deploy to Pages
 
 on:
   push:
-    branches: [ main ]   # ← change if your default branch isn’t main
+    branches: [ main ]   # change if your default branch is not main
   workflow_dispatch:
 
 permissions:
@@ -28,29 +28,32 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-     - name: Stage site files (exclude heavy/dev stuff)
-  run: |
-    set -e
-    rm -rf _site
-    mkdir -p _site
-    # Copy EVERYTHING, but skip junk/dev folders & huge files
-    rsync -a ./ _site/ \
-      --delete \
-      --exclude '.git/' \
-      --exclude '.github/' \
-      --exclude 'node_modules/' \
-      --exclude '.vscode/' \
-      --exclude 'raw/' \
-      --exclude 'originals/' \
-      --exclude 'uploads_raw/' \
-      --exclude '*.psd' \
-      --exclude '*.zip' \
-      --exclude '*.mov' \
-      --exclude '*.mp4'
+      - name: Stage site files (exclude heavy/dev stuff)
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site
+          # Copy EVERYTHING into _site, but exclude dev/junk/heavy items
+          rsync -a ./ _site/ \
+            --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'node_modules/' \
+            --exclude '.vscode/' \
+            --exclude 'raw/' \
+            --exclude 'originals/' \
+            --exclude 'uploads_raw/' \
+            --exclude '*.psd' \
+            --exclude '*.zip' \
+            --exclude '*.mov' \
+            --exclude '*.mp4'
+          # Ensure core files at root if present
+          cp -f CNAME _site/ 2>/dev/null || true
+          cp -f 404.html _site/ 2>/dev/null || true
+          cp -f favicon.ico _site/ 2>/dev/null || true
+          cp -f robots.txt _site/ 2>/dev/null || true
+          cp -f sitemap.xml _site/ 2>/dev/null || true
 
-    # Ensure these core files are present at the root (safe if they don't exist)
-    cp -f CNAME _site/ 2>/dev/null || true
-    cp -f 404.html _site/ 2>/dev/null || true
       - name: Show staged size
         run: du -sh _site || true
 
