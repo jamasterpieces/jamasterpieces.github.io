@@ -29,15 +29,32 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  - name: Checkout
+    uses: actions/checkout@v4
+
+  - name: Setup Pages
+    uses: actions/configure-pages@v5
+
+  - name: Stage site files (runner only)
+    run: |
+      set -e
+      rm -rf _site
+      mkdir -p _site
+      # Include only the files/folders you actually serve:
+      cp -f index.html _site/ 2>/dev/null || true
+      cp -f 404.html _site/ 2>/dev/null || true
+      cp -f CNAME _site/ 2>/dev/null || true
+
+      # Copy your public folders. Adjust this list to match your site.
+      for d in ceec images css js assets; do
+        [ -d "$d" ] && rsync -a "$d"/ "_site/$d"/
+      done
+
+  - name: Upload artifact
+    uses: actions/upload-pages-artifact@v3
+    with:
+      path: ./_site
+
+  - name: Deploy to GitHub Pages
+    id: deployment
+    uses: actions/deploy-pages@v4
