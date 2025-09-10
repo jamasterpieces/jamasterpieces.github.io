@@ -1,0 +1,76 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: [ main ]
+    # Optional: only deploy when web files change (adjust as needed)
+    paths:
+      - "index.html"
+      - "**/*.html"
+      - "assets/**"
+      - "images/**"
+      - "ceec/**"
+      - ".github/workflows/pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 👇 Stage ONLY what you want published into _site/
+      - name: Stage site (exclude heavy/dev stuff)
+        run: |
+          rm -rf _site && mkdir -p _site
+          rsync -av --delete \
+            --exclude 'images/fullres/**' \
+            --exclude 'albums/*/fullres/**' \
+            --exclude '**/*.zip' \
+            --exclude '**/*.psd' \
+            --exclude '**/*.raw' \
+            --exclude '**/*.arw' \
+            --exclude '**/*.cr2' \
+            --exclude '**/*.dng' \
+            --exclude '**/*.mov' \
+            --exclude '**/*.mp4' \
+            --exclude '**/*.mkv' \
+            ./ _site/
+          # If you aren't using Jekyll features, keep it off:
+          touch _site/.nojekyll
+          echo "—— Largest paths in _site ——"
+          du -h -d 2 _site | sort -h | tail -n 25
+
+      # 👇 Hard stop if the staged site is too large
+      - name: Size gate
+        run: |
+          BYTES=$(du -sb _site | cut -f1)
+          LIMIT=$((950*1024*1024))   # ~950 MB safety margin
+          echo "Site size: $BYTES bytes"
+          if [ "$BYTES" -gt "$LIMIT" ]; then
+            echo "❌ _site exceeds 950MB. Refusing to deploy."
+            du -h -d 2 _site | sort -h | tail -n 25
+            exit 1
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
