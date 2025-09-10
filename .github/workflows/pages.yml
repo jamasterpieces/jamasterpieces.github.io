@@ -1,39 +1,70 @@
-- name: Stage site (whitelist copy only)
-  run: |
-    set -e
-    rm -rf _site && mkdir -p _site
+# .github/workflows/pages.yml
+name: Deploy Pages
 
-    # ---- Root HTML files you actually want live ----
-    for f in index.html photography.html ceec.html expressions.html; do
-      [ -f "$f" ] && cp -v "$f" _site/ || true
-    done
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]   # <-- change if your default branch isn't 'main'
+    paths:
+      - "**/*.html"
+      - "assets/**"
+      - "images/icons/**"
+      - "ceec/**"
+      - ".github/workflows/pages.yml"
 
-    # ---- Copy only the folders you intend to serve ----
-    # assets (css/js/fonts)
-    mkdir -p _site/assets
-    [ -d assets ] && rsync -av assets/ _site/assets/
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-    # icons (not full image library)
-    mkdir -p _site/images/icons
-    [ -d images/icons ] && rsync -av images/icons/ _site/images/icons/
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
-    # CEEC pages (html + light images)
-    mkdir -p _site/ceec
-    [ -d ceec ] && rsync -av ceec/ _site/ceec/
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    # Example: copy gallery thumbs + web-sized, but NOT fullres/originals
-    # Uncomment and tailor these to your structure:
-    # mkdir -p _site/images/ceec-classic/thumbs _site/images/ceec-classic/full
-    # rsync -av images/ceec-classic/thumbs/ _site/images/ceec-classic/thumbs/
-    # rsync -av images/ceec-classic/full/   _site/images/ceec-classic/full/
+      # --- Only stage what you actually want to publish ---
+      - name: Stage site (whitelist copy only)
+        run: |
+          set -euo pipefail
+          rm -rf _site && mkdir -p _site
 
-    # If you aren't using Jekyll features:
-    touch _site/.nojekyll
+          # Copy root HTML files (adjust list if needed)
+          shopt -s nullglob
+          for f in *.html; do
+            cp -v "$f" _site/
+          done
 
-    echo "—— Largest paths in _site ——"
-    du -h -d 2 _site | sort -h | tail -n 25
+          # Assets (css/js/fonts) — safe/light
+          if [ -d assets ]; then
+            mkdir -p _site/assets
+            rsync -av --delete assets/ _site/assets/
+          fi
 
-      # 👇 Hard stop if the staged site is too large
+          # Icons only (NOT full image library)
+          if [ -d images/icons ]; then
+            mkdir -p _site/images/icons
+            rsync -av images/icons/ _site/images/icons/
+          fi
+
+          # CEEC pages (html + light images you keep here)
+          if [ -d ceec ]; then
+            mkdir -p _site/ceec
+            rsync -av ceec/ _site/ceec/
+          fi
+
+          # If you aren't using Jekyll features:
+          touch _site/.nojekyll
+
+          echo "—— Largest paths in _site ——"
+          du -h -d 2 _site | sort -h | tail -n 25
+
+      # --- Hard stop if the staged site is too large ---
       - name: Size gate
         run: |
           BYTES=$(du -sb _site | cut -f1)
@@ -53,6 +84,9 @@
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to Pages
         id: deployment
