@@ -1,54 +1,37 @@
-name: Deploy Pages
+- name: Stage site (whitelist copy only)
+  run: |
+    set -e
+    rm -rf _site && mkdir -p _site
 
-on:
-  push:
-    branches: [ main ]
-    # Optional: only deploy when web files change (adjust as needed)
-    paths:
-      - "index.html"
-      - "**/*.html"
-      - "assets/**"
-      - "images/**"
-      - "ceec/**"
-      - ".github/workflows/pages.yml"
+    # ---- Root HTML files you actually want live ----
+    for f in index.html photography.html ceec.html expressions.html; do
+      [ -f "$f" ] && cp -v "$f" _site/ || true
+    done
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    # ---- Copy only the folders you intend to serve ----
+    # assets (css/js/fonts)
+    mkdir -p _site/assets
+    [ -d assets ] && rsync -av assets/ _site/assets/
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
+    # icons (not full image library)
+    mkdir -p _site/images/icons
+    [ -d images/icons ] && rsync -av images/icons/ _site/images/icons/
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    # CEEC pages (html + light images)
+    mkdir -p _site/ceec
+    [ -d ceec ] && rsync -av ceec/ _site/ceec/
 
-      # 👇 Stage ONLY what you want published into _site/
-      - name: Stage site (exclude heavy/dev stuff)
-        run: |
-          rm -rf _site && mkdir -p _site
-          rsync -av --delete \
-            --exclude 'images/fullres/**' \
-            --exclude 'albums/*/fullres/**' \
-            --exclude '**/*.zip' \
-            --exclude '**/*.psd' \
-            --exclude '**/*.raw' \
-            --exclude '**/*.arw' \
-            --exclude '**/*.cr2' \
-            --exclude '**/*.dng' \
-            --exclude '**/*.mov' \
-            --exclude '**/*.mp4' \
-            --exclude '**/*.mkv' \
-            ./ _site/
-          # If you aren't using Jekyll features, keep it off:
-          touch _site/.nojekyll
-          echo "—— Largest paths in _site ——"
-          du -h -d 2 _site | sort -h | tail -n 25
+    # Example: copy gallery thumbs + web-sized, but NOT fullres/originals
+    # Uncomment and tailor these to your structure:
+    # mkdir -p _site/images/ceec-classic/thumbs _site/images/ceec-classic/full
+    # rsync -av images/ceec-classic/thumbs/ _site/images/ceec-classic/thumbs/
+    # rsync -av images/ceec-classic/full/   _site/images/ceec-classic/full/
+
+    # If you aren't using Jekyll features:
+    touch _site/.nojekyll
+
+    echo "—— Largest paths in _site ——"
+    du -h -d 2 _site | sort -h | tail -n 25
 
       # 👇 Hard stop if the staged site is too large
       - name: Size gate
