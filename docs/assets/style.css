@@ -1,0 +1,10 @@
+:root { --max: 880px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.5; }
+.wrap { max-width: var(--max); margin: 4rem auto; padding: 0 1rem; }
+h1 { margin-bottom: 1.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
+.card { display: grid; gap: .25rem; padding: 1rem; border: 1px solid #ddd; border-radius: 12px; text-decoration: none; color: inherit; }
+.card:hover { border-color: #aaa; }
+.title { font-weight: 600; }
+.hint { color: #555; font-size: .95rem; }
