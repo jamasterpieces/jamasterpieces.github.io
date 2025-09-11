@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g>
+    <circle cx="12" cy="3.2" r="1.2"/>
+    <circle cx="8.7" cy="4.1" r="1.2"/>
+    <circle cx="6.2" cy="6.2" r="1.2"/>
+    <circle cx="5" cy="9" r="1.2"/>
+    <circle cx="5.5" cy="12" r="1.2"/>
+    <circle cx="7.1" cy="14.6" r="1.2"/>
+    <circle cx="9.7" cy="16.2" r="1.2"/>
+    <circle cx="12.7" cy="16.5" r="1.2"/>
+    <circle cx="15.4" cy="15.4" r="1.2"/>
+    <circle cx="17.2" cy="13.2" r="1.2"/>
+    <circle cx="17.9" cy="10.5" r="1.2"/>
+    <circle cx="17.1" cy="7.8" r="1.2"/>
+    <circle cx="15.3" cy="5.7" r="1.2"/>
+  </g>
+  <!-- clasp bead -->
+  <circle cx="12" cy="20.5" r="1.5" fill="black" stroke="none"/>
+</svg>
