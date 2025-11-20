@@ -1,142 +1,241 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>CEEC</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmen Elise's Extraordinary Creations | Site Update</title>
+  <style>
+    :root {
+      --bg: #fdf6ff;
+      --card-bg: #ffffff;
+      --accent: #e76ba9;
+      --accent-soft: rgba(231, 107, 169, 0.08);
+      --text-main: #222222;
+      --text-muted: #666666;
+      --border-soft: #f0d7eb;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.06);
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-<p><a href="https://www.jamasterpieces.com">J &amp; A Masterpieces LLC</a> presents:</p>
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" width="200px" alt="logo" /></span><span class="title">Carmen Elise's Extraordinary Creations</span>
-								</a>
+    * {
+      box-sizing: border-box;
+    }
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #ffe6f3, #fdf6ff 40%, #f5f2ff);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
 
-						</div>
-					</header>
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      max-width: 720px;
+      width: 100%;
+      padding: 32px 28px 26px;
+      border: 1px solid var(--border-soft);
+      position: relative;
+      overflow: hidden;
+    }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="classic.html">Classic</a></li>
-          					<li><a href="polymer.html">Polymer</a></li>
-          					<li><a href="keychains.html">Keychains</a></li>
-          					<li><a href="artwork.html">Artwork</a></li>
-							<li><a href="contact.html">Order Form</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="about.html">About CEEC</a></li>
-						</ul>
-					</nav>
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>Color, Craft, and Creativity in Every Piece</h1>
-								<p>From playful beaded bracelets to bold paracord designs and unique keychains, CEEC collections celebrate self-expression and individuality. Each piece is crafted with care, designed to add a spark of personality to your everyday style.</p>
-								<p>Please note, this website is under development and some functions may not work properly. Please use the <a href="contact.html">contact us</a> page for purchase inquiries.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="classic.html">
-										<h2>Classic beaded bracelets</h2>
-										<div class="content">
-											<p>Handcrafted acrylic beads in various sizes, colors and styles.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="polymer.html">
-										<h2>Polymer clay beaded bracelets</h2>
-										<div class="content">
-											<p>Beautifully formed clay beads forged in the fires of Mount Oven.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="paracord.html">
-									<h2>Paracord bracelets</h2>
-										<div class="content">
-											<p>Stylish and full of personality, our paracord bracelets bring handcrafted flair to everyday fashion.</p>
-										</div>
-								  </a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="keychains.html">
-										<h2>Keychains</h2>
-										<div class="content">
-											<p>Stylish and practical, our paracord keychains add a touch of color and craftsmanship to your everyday essentials.</p>
-										</div>
-									</a>
-								</article>
-							  <article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<a href="artwork.html">
-										<h2>Artwork</h2>
-										<div class="content">
-											<p>From vibrant designs to thoughtful creations, CEEC artwork is made to inspire, decorate, and bring creativity into your space.</p>
-										</div>
-									</a>
-								</article>
-								</section>
-						</div>
-					</div>
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(231, 107, 169, 0.7);
+    }
 
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.1rem);
+      line-height: 1.2;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
+    h1 span.highlight {
+      color: var(--accent);
+    }
 
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+    .subheading {
+      margin: 0 0 18px;
+      font-size: 0.96rem;
+      color: var(--text-muted);
+    }
 
-			</div>
+    .section {
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .section strong {
+      font-weight: 600;
+    }
 
-	</body>
+    .info-box {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #faf4ff;
+      border: 1px dashed #d5bdf5;
+      font-size: 0.85rem;
+      color: #4b3a75;
+    }
+
+    .info-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.78rem;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f9ebff;
+      border: 1px solid #f0d7eb;
+      color: #7a486d;
+      font-weight: 500;
+    }
+
+    /* Small decorative shapes */
+    .shape {
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .shape-1 {
+      width: 90px;
+      height: 90px;
+      background: #ffe6f3;
+      top: -30px;
+      right: -15px;
+    }
+
+    .shape-2 {
+      width: 60px;
+      height: 60px;
+      background: #f4e8ff;
+      bottom: -20px;
+      left: -10px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 24px 18px 20px;
+        border-radius: 16px;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <div class="pill">
+      <span class="pill-dot"></span>
+      Site Update In Progress
+    </div>
+
+    <h1>
+      Carmen Elise’s <span class="highlight">Extraordinary Creations</span>
+      is getting a refresh.
+    </h1>
+
+    <p class="subheading">
+      We’re updating the CEEC site with new products, better photos, and a
+      smoother shopping experience.
+    </p>
+
+    <section class="section">
+      <strong>The shop isn’t gone — just getting an upgrade.</strong><br />
+      While we work behind the scenes, you can still follow along and support
+      Carmen’s journey as a young entrepreneur at local markets and on social
+      media.
+    </section>
+
+    <section class="section">
+      For updates, market schedules, and new releases, please check our social
+      pages or reach out directly:
+      <div class="info-box">
+        <span class="info-label">Contact</span>
+        Email: <a href="mailto:jamasterpieces@gmail.com">jamasterpieces@gmail.com</a><br />
+        Facebook / Instagram:
+        <strong>@jamasterpieces</strong> &amp;
+        <strong>@CarmenElisesExtraordinaryCreations</strong>
+      </div>
+      <div class="badge-row">
+        <span class="badge">#CarmenElisesExtraordinaryCreations</span>
+        <span class="badge">#ShopCEEC</span>
+        <span class="badge">#CSRA</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Thank you for supporting a kid-powered small business.</span>
+      <a href="https://www.jamasterpieces.com">← Back to J &amp; A Masterpieces</a>
+    </footer>
+  </main>
+</body>
 </html>
