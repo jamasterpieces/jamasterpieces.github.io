@@ -5,13 +5,33 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>CEEC</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+	 <head>
+    <title>CEEC — Polymer Bracelets</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* Minimal modal styles to match Phantom */
+      .modal-ceec { display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:10000; }
+      .modal-ceec.visible { display:block; }
+      .modal-ceec .inner { position:absolute; inset:3% 3%; background:#1f1f1f; border-radius:.25em; display:grid; grid-template-rows:auto 1fr auto; gap:.75rem; padding:1rem; }
+      .modal-ceec .header { display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
+      .modal-ceec .header h2 { margin:0; }
+      .modal-ceec .close { border:0; background:none; font-size:1.75rem; line-height:1; cursor:pointer; color:inherit; }
+      .modal-ceec .viewport { position:relative; height:100%; display:grid; place-items:center; overflow:hidden; background:#151515; }
+      .modal-ceec .viewport img { max-width:100%; max-height:100%; object-fit:contain; display:block; }
+      .modal-ceec .nav { position:absolute; inset:0; pointer-events:none; }
+      .modal-ceec .nav button { pointer-events:auto; position:absolute; top:50%; transform:translateY(-50%); border:0; background:rgba(255,255,255,.08); color:inherit; font-size:2rem; width:2.5rem; height:2.5rem; line-height:2.5rem; border-radius:.25em; cursor:pointer; }
+      .modal-ceec .nav .prev { left:.5rem; } .modal-ceec .nav .next { right:.5rem; }
+      .modal-ceec .footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.75rem; }
+      .modal-ceec .thumbs { display:flex; gap:.5rem; overflow-x:auto; }
+      .modal-ceec .thumbs img { width:60px; height:60px; object-fit:cover; border-radius:.2em; opacity:.7; cursor:pointer; border:1px solid rgba(255,255,255,.1); }
+      .modal-ceec .thumbs img.active { opacity:1; outline:2px solid #fff; }
+      @media (max-width: 768px){ .modal-ceec .inner { inset:5% 4%; } }
+      .tiles .product:hover { transform: translateY(-2px); transition: transform .12s ease; }
+    </style>
+  </head>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -124,72 +144,57 @@ CEEC also pays tribute to our customers, naming customized beads to share the lo
             </article>
 			  
 			  <article class="product"
-              data-title="Classic Bracelet 04"
-              data-price="$3"
+              data-title="Pistachio Nights"
+              data-price="$5"
               data-link="orderform.html"
-              data-images="images/ceec-classic/full/classic-04.jpg|images/ceec-classic/full/classic-04b.jpg"
+              data-images="images/ceec-polymer/full/pistachionights.jpg|images/ceec-polymer/full/pistachionights.jpg"
               data-caption="A balanced colorway for everyday wear.">
               <span class="image">
-                <img src="images/ceec-classic/thumbs/classic-04.jpg" alt="Classic Bracelet 04" />
+                <img src="images/ceec-polymer/full/pistachionights.jpg" alt="Black green and silver" />
               </span>
               <a href="#">
-                <h2>Classic Bracelet 04</h2>
+                <h2>Pistachio Nights</h2>
                 <div class="content">
-                  <p>Color and comfort in one.</p>
+                  <p>The hypnotic blends of black and green, with a tocuh of silver, almost like you were looking up at the stars.</p>
                 </div>
               </a>
             </article>
 			  
 			  <article class="product"
-              data-title="Classic Bracelet 05"
-              data-price="$3"
+              data-title="Seanstwostep"
+              data-price="$5"
               data-link="orderform.html"
-              data-images="images/ceec-classic/full/classic-05.jpg|images/ceec-classic/full/classic-05b.jpg"
+              data-images="images/ceec-polymer/full/seanstwostep.jpg|images/ceec-polymer/full/seanstwostep.jpg"
               data-caption="A balanced colorway for everyday wear.">
               <span class="image">
-                <img src="images/ceec-classic/thumbs/classic-05.jpg" alt="Classic Bracelet 05" />
+                <img src="images/ceec-polymer/full/seanstwostep.jpg" alt="Sean's Two Step" />
               </span>
               <a href="#">
-                <h2>Classic Bracelet 05</h2>
+                <h2>Sean's Two Step</h2>
                 <div class="content">
-                  <p>Color and comfort in one.</p>
+                  <p>Custom made, this blend of orange, blue and white is a celebration of his future!</p>
                 </div>
               </a>
             </article>
 			  
 			  <article class="product"
-              data-title="Classic Bracelet 06"
-              data-price="$3"
+              data-title="Purple and gold"
+              data-price="$5"
               data-link="orderform.html"
-              data-images="images/ceec-classic/full/classic-06.jpg|images/ceec-classic/full/classic-06b.jpg"
+              data-images="images/ceec-polymer/full/tigersmarch.jpg|images/ceec-polymer/full/tigersmarch.jpg"
               data-caption="A balanced colorway for everyday wear.">
               <span class="image">
-                <img src="images/ceec-classic/thumbs/classic-06.jpg" alt="Classic Bracelet 06" />
+                <img src="images/ceec-polymer/full/tigersmarch.jpg" alt="Tigers" />
               </span>
               <a href="#">
-                <h2>Classic Bracelet 06</h2>
+                <h2>Tiger's March</h2>
                 <div class="content">
-                  <p>Color and comfort in one.</p>
+                  <p>Grrrr tigers!</p>
                 </div>
               </a>
             </article>
 			  
-			  <article class="product"
-              data-title="Classic Bracelet 07"
-              data-price="$3"
-              data-link="orderform.html"
-              data-images="images/ceec-classic/full/classic-07.jpg|images/ceec-classic/full/classic-07b.jpg"
-              data-caption="A balanced colorway for everyday wear.">
-              <span class="image">
-                <img src="images/ceec-classic/thumbs/classic-07.jpg" alt="Classic Bracelet 07" />
-              </span>
-              <a href="#">
-                <h2>Classic Bracelet 07</h2>
-                <div class="content">
-                  <p>Color and comfort in one.</p>
-                </div>
-              </a>
-            </article>
+			  
           </section>
         </div>
       </div>
@@ -236,13 +241,137 @@ CEEC also pays tribute to our customers, naming customized beads to share the lo
 					</footer>
 
 			</div>
-
+ <!-- Modal Carousel -->
+    <div class="modal-ceec" id="ceecModal" aria-hidden="true" role="dialog" aria-label="Product images">
+      <div class="inner">
+        <div class="header">
+          <h2 id="modalTitle">Title</h2>
+          <button class="close" id="modalClose" aria-label="Close">&times;</button>
+        </div>
+        <div class="viewport">
+          <img id="modalImage" alt="" />
+          <div class="nav">
+            <button class="prev" id="modalPrev" aria-label="Previous">&#8249;</button>
+            <button class="next" id="modalNext" aria-label="Next">&#8250;</button>
+          </div>
+        </div>
+        <div class="footer">
+          <div>
+            <p id="modalCaption" style="margin:0 0 .5rem 0; opacity:.85;"></p>
+            <strong id="modalPrice"></strong>
+          </div>
+          <div class="thumbs" id="modalThumbs"></div>
+          <div style="margin-left:auto">
+            <a id="modalOrderLink" href="orderform.html" class="button primary">Order This</a>
+          </div>
+        </div>
+      </div>
+    </div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+ <!-- Gallery / Modal logic -->
+    <script>
+      (function(){
+        const $ = (sel, root=document) => root.querySelector(sel);
+        const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
+        const modal = $('#ceecModal');
+        const modalTitle = $('#modalTitle');
+        const modalImage = $('#modalImage');
+        const modalCaption = $('#modalCaption');
+        const modalPrice = $('#modalPrice');
+        const modalThumbs = $('#modalThumbs');
+        const modalOrder = $('#modalOrderLink');
+        const btnClose = $('#modalClose');
+        const btnPrev = $('#modalPrev');
+        const btnNext = $('#modalNext');
+
+        let images = [];
+        let index = 0;
+
+        function openModal(productEl){
+          images = (productEl.getAttribute('data-images') || '').split('|').filter(Boolean);
+          index = 0;
+          modalTitle.textContent = productEl.getAttribute('data-title') || '';
+          modalCaption.textContent = productEl.getAttribute('data-caption') || '';
+          modalPrice.textContent = productEl.getAttribute('data-price') || '';
+          modalOrder.href = productEl.getAttribute('data-link') || 'orderform.html';
+          buildThumbs();
+          show(index);
+          modal.classList.add('visible');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden'; // prevent page scroll
+        }
+
+        function closeModal(){
+          modal.classList.remove('visible');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+
+        function show(i){
+          if(!images.length) return;
+          index = (i + images.length) % images.length;
+          modalImage.src = images[index];
+          $$('img', modalThumbs).forEach((img, idx) => {
+            img.classList.toggle('active', idx === index);
+          });
+        }
+
+        function buildThumbs(){
+          modalThumbs.innerHTML = '';
+          images.forEach((src, i) => {
+            const t = document.createElement('img');
+            t.src = src;
+            t.alt = 'thumbnail ' + (i+1);
+            t.addEventListener('click', () => show(i));
+            modalThumbs.appendChild(t);
+          });
+        }
+
+        // Open modal on tile click
+        $$('.tiles .product a').forEach(a => {
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const article = a.closest('.product');
+            openModal(article);
+          });
+        });
+
+        // Close handlers
+        btnClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+
+        // Nav
+        btnPrev.addEventListener('click', () => show(index - 1));
+        btnNext.addEventListener('click', () => show(index + 1));
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+          if(modal.classList.contains('visible')){
+            if(e.key === 'Escape') closeModal();
+            if(e.key === 'ArrowLeft') show(index - 1);
+            if(e.key === 'ArrowRight') show(index + 1);
+          }
+        });
+
+        // Swipe support
+        let startX = null;
+        $('.viewport').addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+        $('.viewport').addEventListener('touchmove', e => {
+          if(startX === null) return;
+          const dx = e.touches[0].clientX - startX;
+          if(Math.abs(dx) > 40){
+            show(index + (dx < 0 ? 1 : -1));
+            startX = null;
+          }
+        });
+
+      })();
+		</script>
 	</body>
 </html>
