@@ -55,11 +55,11 @@
 				<div class="inner">
 					<header>
 						<h1>Hey! How'd you get here?? Please use the Contact Us page instead.</h1>
-						<p>Tell us what you’d like. We’ll confirm details by email and send an invoice.</p>
+						<p>Our online order form is not fully operational at this time.</p>
 					</header>
 
 					<!-- CEEC Order Form (theme-native styles) -->
-					<section>
+					<section style="display:none;"><section>
 						<form id="orderForm" method="POST" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID">
 							<!-- Honeypot -->
 							<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off" />
@@ -88,8 +88,9 @@
 									<label for="product">Product</label>
 									<select name="product" id="product" required>
 										<option value="" disabled selected>Choose…</option>
+										<option>Classic Acrylic bracelet</option>
 										<option>Paracord Bracelet</option>
-										<option>Bead Bracelet</option>
+										<option>Polymer Bracelet</option>
 										<option>Keychain</option>
 										<option>Artwork</option>
 									</select>
@@ -101,7 +102,7 @@
 								<div class="col-6 col-12-xsmall">
 									<label for="size">Size</label>
 									<select name="size" id="size" required>
-										<option value="" disabled selected>Select…</option>
+										<option value="" disabled selected>Wrist size…</option>
 										<option>XS (7")</option>
 										<option>S (7.5")</option>
 										<option>M (8")</option>
@@ -109,7 +110,7 @@
 										<option>XL (9")</option>
 									</select>
 								</div>
-								<div class="col-6 col-12-xsmall">
+								<section style="display:none;"><div class="col-6 col-12-xsmall">
 									<label for="color">Color(s)</label>
 									<select name="color" id="color" required>
 										<option value="" disabled selected>Choose…</option>
@@ -119,7 +120,7 @@
 										<option>OD Green</option>
 										<option>Custom Mix (describe)</option>
 									</select>
-								</div>
+								</div></section>
 
 								<div class="col-12">
 									<label for="engrave">Custom Text (optional)</label>
@@ -131,7 +132,7 @@
 									<select name="rush" id="rush">
 										<option value="none" selected>No rush</option>
 										<option value="standard">48–72 hr (+$10)</option>
-										<option value="express">24 hr (+$20)</option>
+										<option value="express"></option>
 									</select>
 								</div>
 
@@ -169,7 +170,7 @@
 						</form>
 					</section>
 				</div>
-			</div>
+			</div></section>
 
 			<!-- Footer -->
 			<footer id="footer">
