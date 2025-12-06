@@ -1,21 +1,164 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expressions by Audrey – J & A Masterpieces</title>
+
+  <!-- Same CSS stack as home -->
+  <link rel="stylesheet" type="text/css" href="source/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="source/font-awesome-4.5.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style/slider.css">
+  <link rel="stylesheet" type="text/css" href="style/mystyle.css">
+  <link rel="icon" type="image/png" href="image/icon.png">
+  <link rel="preload" href="assets/style.css" as="style" />
   <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- Card/grid styles (same idea as your small style.css) -->
+  <style>
+    :root { --max: 880px; }
+    .expressions-wrap {
+      max-width: var(--max);
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      display: grid;
+      gap: .25rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+    }
+    .card:hover { border-color: #aaa; }
+    .card .title { font-weight: 600; }
+    .card .hint { color: #555; font-size: .95rem; }
+  </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <h1>Expressions by Audrey</h1>
-    <p>Laser-engraved décor and giftables. Gallery and order info coming soon.</p>
 
-    <ul>
-      <li>Custom inquiries: <a href="mailto:jamasterpieces@gmail.com">jamasterpieces@gmail.com</a></li>
-    </ul>
+  <!-- HEADER + NAV (same as home) -->
+  <div class="allcontain">
+    <nav class="topnavbar navbar-default topnav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed toggle-costume"
+                  data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="image/Header.png" alt="logo" width="100%">
+        </div>
+      </div>
 
-    <p><a href="./">← Back to Home</a></p>
-  </main>
-</body>
-</html>
+      <div class="collapse navbar-collapse" id="upmenu">
+        <ul class="nav navbar-nav" id="navbarontop">
+          <li><a href="index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">
+              CATEGORIES <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdowncostume">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="photography.html">THE STUDIO</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MAIN EXPRESSIONS CONTENT -->
+  <div class="allcontain">
+    <div class="expressions-wrap">
+
+      <!-- Banner image -->
+      <img
+        src="image/expressions-banner.png"
+        alt="Expressions by Audrey Workspace"
+        style="width:100%; border-radius:10px; margin-bottom:2rem;"
+      />
+
+      <p>
+        A warm collection of hand-painted wooden décor, colorful finishes,
+        and personalized gifts — each piece crafted with intention, creativity,
+        and a love for brightening the spaces people call home.
+      </p>
+
+      <h2 style="margin-top:2.5rem;">Collection Preview</h2>
+
+      <div class="grid">
+        <a class="card" href="#">
+          <span class="title">Painted Wood Signs</span>
+          <span class="hint">Bold colors • crisp lines • indoor &amp; outdoor finishes</span>
+        </a>
+
+        <a class="card" href="#">
+          <span class="title">Seasonal Décor</span>
+          <span class="hint">Holiday themes • event pieces • limited editions</span>
+        </a>
+
+        <a class="card" href="#">
+          <span class="title">Custom Requests</span>
+          <span class="hint">Names • dates • special occasion gifts</span>
+        </a>
+      </div>
+
+<section class="gallery-preview">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="image/expressions/item1.jpg" alt="Hand-painted wooden sign">
+    <img src="image/expressions/item2.jpg" alt="More items to be added">
+    <img src="image/expressions/item3.jpg" alt="More items to be added">
+    <img src="image/expressions/item4.jpg" alt="More items to be added">
+  </div>
+</section>		
+		
+      <h2 style="margin-top:3rem;">Contact</h2>
+      <p>For custom inquiries or commissions:</p>
+      <ul>
+        <li><a href="mailto:jamasterpieces@gmail.com">jamasterpieces@gmail.com</a></li>
+      </ul>
+
+      <p style="margin-top:2rem;"><a href="index.html">← Back to Home</a></p>
+    </div>
+  </div>
+
+  <!-- FOOTER (same as home) -->
+  <div class="bottommenu">
+    <div class="bottomlogo">
+      <span class="dotlogo">&bullet;</span>
+      <img src="image/logo1.png" alt="logo" width="200px">
+      <span class="dotlogo">&bullet;</span>
+    </div>
+    <img src="image/line.png" alt="line"><br>
+    <p>Inspired Design. Lasting Impression.</p>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li><br>
+            <li><a href="products.html">Products</a></li><br>
+            <li><a href="services.html">Services</a></li><br>
+            <li><a href="about.html">About</a></li><br>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="fo
