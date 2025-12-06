@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>J &amp; A Masterpieces LLC</title>
@@ -50,6 +50,187 @@
 
     /* Footer */
     footer { color:#666; padding: 3rem 0 2rem; text-align:center; }
+	/* BRAND CAROUSEL */
+    .brand-carousel {
+      max-width: var(--maxw);
+      margin: 0 auto 2.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .brand-carousel-shell {
+      position: relative;
+      background: linear-gradient(135deg, #ffffff, #f3e7da);
+      border-radius: 18px;
+      padding: 1.1rem 1.1rem 1.4rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+      border: 1px solid #e0d1c1;
+      overflow: hidden;
+    }
+
+    .brand-carousel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-carousel-header h2 {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    .brand-carousel-header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #5a5048;
+    }
+
+    .brand-carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .brand-slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+      align-items: center;
+      padding-top: 0.25rem;
+    }
+
+    .brand-slide h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.15rem;
+    }
+
+    .brand-slide .tagline {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #6b5b4f;
+    }
+
+    .brand-slide p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #493e36;
+    }
+
+    .brand-slide ul {
+      margin: 0.1rem 0 0.5rem 1.1rem;
+      padding: 0;
+      font-size: 0.85rem;
+      color: #5b524a;
+    }
+
+    .brand-slide ul li + li {
+      margin-top: 0.25rem;
+    }
+
+    .brand-slide .button {
+      margin-top: 0.4rem;
+    }
+
+    .brand-slide-visual {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(198, 171, 142, 0.8);
+      padding: 0.9rem;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .brand-pill {
+      align-self: flex-start;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(187, 163, 139, 0.6);
+      background: #f9f2eb;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .brand-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: #7a6a6a;
+    }
+
+    .brand-carousel-controls {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: #7a6a6a;
+    }
+
+    .brand-nav-buttons {
+      display: inline-flex;
+      gap: 0.35rem;
+    }
+
+    .brand-nav-btn {
+      border-radius: 999px;
+      border: 1px solid #cfbda8;
+      background: #ffffff;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+
+    .brand-nav-btn:hover {
+      background: #f3e3d4;
+    }
+
+    .brand-dots {
+      display: inline-flex;
+      gap: 0.25rem;
+    }
+
+    .brand-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #c8b6a3;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .brand-dot.active {
+      background: #c46b3b;
+      border-color: #c46b3b;
+    }
+
+    @media (max-width: 768px) {
+      .brand-slide {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .brand-carousel-shell {
+        padding: 1rem;
+      }
+
+      .brand-carousel-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand-carousel-controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -93,13 +274,146 @@
 	</nav>
 </div>
 <!doctype html>
-<html lang="en">
 <body>
   <header class="hero wrap">
     <h4><i>Photography • Engraving • Handmade décor — crafted in the CSRA</i></h4>
   </header>
 
-  <main class="wrap">
+<!--_______________________________________ Brand Pillars Carousel __________________________________ -->
+<div class="allcontain">
+  <div id="carousel-up" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Slide 1: The Studio -->
+      <div class="item active">
+        <!-- TODO: swap to a real studio/portrait image -->
+        <img src="image/home-studio.jpg" alt="The Studio - photography" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>The Studio</h2>
+          <p>
+            Wedding, portrait, event, and product photography<br>
+            crafted to tell your story with intention and clarity.
+          </p>
+          <br>
+          <p>
+            <a href="https://www.jamasterpieces.com/photography" class="btn btn-primary btn-sm">
+              Visit The Studio
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 2: CEEC -->
+      <div class="item">
+        <!-- TODO: swap to CEEC logo / bracelet photo -->
+        <img src="image/home-ceec.jpg" alt="CEEC bracelets and accessories" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>CEEC — Carmen Elise’s Extraordinary Creations</h2>
+          <p>
+            Tiny designs, big personality: handmade bracelets,<br>
+            paracord, and accessories full of color and character.
+          </p>
+          <br>
+          <p>
+            <a href="../ceec/index.html" class="btn btn-primary btn-sm">
+              Open CEEC catalog
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 3: Expressions by Audrey -->
+      <div class="item">
+        <!-- TODO: swap to Audrey sign photo -->
+        <img src="image/home-expressions.jpg" alt="Expressions by Audrey signs" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>Expressions by Audrey</h2>
+          <p>
+            Painted wooden signs and décor that bring warmth,<br>
+            color, and personality into your favorite spaces.
+          </p>
+          <br>
+          <p>
+            <a href="expressions.html" class="btn btn-primary btn-sm">
+              See Expressions
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 4: Jonathan's Woodshop -->
+      <div class="item">
+        <!-- TODO: swap to GlowVault/ShelfSmith/wood projects image -->
+        <img src="image/home-woodshop.jpg" alt="Jonathan's Woodshop projects" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>Jonathan’s Woodshop</h2>
+          <p>
+            Laser-cut and hand-finished builds like GlowVault,<br>
+            ShelfSmith, chess boards, and candle boxes.
+          </p>
+          <br>
+          <p>
+            <a href="woodshop.html" class="btn btn-primary btn-sm">
+              Enter Jonathan’s Woodshop
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 5: Laser Engraving -->
+      <div class="item">
+        <!-- TODO: swap to engraving close-up -->
+        <img src="image/home-engraving.jpg" alt="Laser engraving examples" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>Laser Engraving</h2>
+          <p>
+            Personalized engraving on wood, acrylic, leather,<br>
+            and metals for gifts, branding, and keepsakes.
+          </p>
+          <br>
+          <p>
+            <a href="engraving.html" class="btn btn-primary btn-sm">
+              Engraving details
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 6: Vinyl Cutting -->
+      <div class="item">
+        <!-- TODO: swap to vinyl decal / transfer photo -->
+        <img src="image/home-vinyl.jpg" alt="Vinyl decals and transfers" style="object-fit:cover; width:100%;">
+        <div class="carousel-caption">
+          <h2>Vinyl Cutting</h2>
+          <p>
+            Decals, labels, and heat transfers for cups, gear,<br>
+            apparel, displays, and more.
+          </p>
+          <br>
+          <p>
+            <a href="vinyl.html" class="btn btn-primary btn-sm">
+              Vinyl options
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel controls -->
+    <a class="left carousel-control" href="#carousel-up" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-up" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+	
+   <main class="wrap">
     <!-- SERVICES (route to standalone pages) -->
     <section id="services">
       <h2>Services</h2>
@@ -122,57 +436,48 @@
       </div>
     </section>
 
-    <!-- PRODUCT LINES (expand in-page) -->
+ <!-- FEATURED PRODUCT LINES -->
+    <section id="featured-lines">
+      <h2>Featured Product Lines</h2>
+      <p class="muted">The collections that define J &amp; A Masterpieces.</p>
+
+      <div class="grid cols-3">
+        <!-- CEEC -->
+        <article class="card">
+          <h3>CEEC — Carmen Elise’s Extraordinary Creations</h3>
+          <p>Bracelets, paracord, and accessories with bold color and big personality.</p>
+          <a class="button" href="../ceec/index.html">
+            Open CEEC catalog →
+          </a>
+        </article>
+
+        <!-- Expressions by Audrey -->
+        <article class="card">
+          <h3>Expressions by Audrey</h3>
+          <p>Painted wooden signs and décor that bring personality into any space, indoors or out.</p>
+          <!-- SPECULATING: point this to whatever page you want for Expressions. -->
+          <a class="button" href="expressions.html">
+            See Expressions →
+          </a>
+        </article>
+
+        <!-- Jonathan's Woodshop -->
+        <article class="card">
+          <h3>Jonathan’s Woodshop</h3>
+          <p>Laser-cut and hand-finished builds like GlowVault, ShelfSmith, chess sets, candle boxes, and more.</p>
+          <!-- SPECULATING: this will be your future Woodshop hub page. -->
+          <a class="button" href="woodshop.html">
+            Enter Jonathan’s Woodshop →
+          </a>
+        </article>
+      </div>
+    </section>	  
+	  
+    <!-- MORE PRODUCT LINES (accordion) -->
     <section id="products">
-      <h2>Product Lines</h2>
-      <p class="muted">Browse right here. CEEC opens in its own page for the full catalog.</p>
+      <h2>More Product Lines</h2>
+      <p class="muted">A few of the other ways we put our tools to work.</p>
 
-      <!-- CEEC: Link out to its own page -->
-      <article class="card" style="margin-bottom:1rem;">
-        <h3>CEEC — Carmen Elise’s Extraordinary Creations</h3>
-        <p>Bracelets and accessories. Extensive lineup lives on a dedicated page.</p>
-        <a class="button" href="../ceec/index.html" aria-label="Go to CEEC catalog">Open CEEC catalog →</a>
-      </article>
-
-      <!-- Expressions (expandable) -->
-      <details class="product" open>
-        <summary>
-          <div class="summary-row">
-            <div class="title">
-              <span aria-hidden="true">🪵</span>
-              <span>Expressions by Audrey</span>
-            </div>
-            <span class="pill">wood signs &amp; décor</span>
-          </div>
-        </summary>
-        <div class="product-body">
-          <div class="thumbs">
-            <div class="thumb"><img src="image/expressions/welcome-sign.jpg" alt="Welcome sign" style="max-width:100%; border-radius:8px;"></div>
-            <div class="thumb">More to come!</div>
-          </div>
-        </div>
-      </details>
-<section style="display: none;">
-      <!-- ShelfSmith (expandable) -->
-      <details class="product">
-        <summary>
-          <div class="summary-row">
-            <div class="title">
-              <span aria-hidden="true">📚</span>
-              <span>The ShelfSmith Series</span>
-            </div>
-            <span class="pill">book-nook style décor</span>
-          </div>
-        </summary>
-        <div class="product-body">
-          <div class="thumbs">
-            <div class="thumb">Retro Alley (WIP)</div>
-            <div class="thumb">Steampunk Window (WIP)</div>
-            <div class="thumb">Military Bay (WIP)</div>
-          </div>
-        </div>
-      </details>
-		</section>
       <!-- GlowVault (expandable) -->
       <details class="product">
         <summary>
@@ -186,14 +491,18 @@
         </summary>
         <div class="product-body">
           <div class="thumbs">
-            <div class="thumb"><a href="https://www.etsy.com/listing/4378349111/glowvault-led-trading-card-display-frame">9×9 frame — Green</a></div>
+            <div class="thumb">
+              <a href="https://www.etsy.com/listing/4378349111/glowvault-led-trading-card-display-frame">
+                9×9 frame — Green
+              </a>
+            </div>
             <div class="thumb">9×9 frame — Red</div>
-            <div class="thumb">9x9 frame - Yellow</div>
+            <div class="thumb">9×9 frame — Yellow</div>
           </div>
         </div>
       </details>
 
-      <!-- Misc / Blanks (expandable) -->
+      <!-- Blanks & Misc (expandable) -->
       <details class="product">
         <summary>
           <div class="summary-row">
@@ -206,13 +515,38 @@
         </summary>
         <div class="product-body">
           <div class="thumbs">
-            <div class="thumb"><img src="image/misc/cards.jpg" alt="Welcome sign" style="max-width:100%; border-radius:8px;"></div>
+            <div class="thumb">
+              <img src="image/misc/cards.jpg" alt="Cards and blanks" style="max-width:100%; border-radius:8px;">
+            </div>
             <div class="thumb">Business cards</div>
             <div class="thumb">Keychains (blank)</div>
           </div>
         </div>
       </details>
+
+      <!-- Optional: keep ShelfSmith hidden until you’re ready -->
+      <section style="display: none;">
+        <details class="product">
+          <summary>
+            <div class="summary-row">
+              <div class="title">
+                <span aria-hidden="true">📚</span>
+                <span>The ShelfSmith Series</span>
+              </div>
+              <span class="pill">book-nook style décor</span>
+            </div>
+          </summary>
+          <div class="product-body">
+            <div class="thumbs">
+              <div class="thumb">Retro Alley (WIP)</div>
+              <div class="thumb">Steampunk Window (WIP)</div>
+              <div class="thumb">Military Bay (WIP)</div>
+            </div>
+          </div>
+        </details>
+      </section>
     </section>
+
   </main>
 
   <footer>
@@ -235,60 +569,6 @@
 </body>
 </html>
 	
-<section hidden>
-	<div class="allcontain">
-	<div class="feturedsection">
-		<h1 class="text-center"><span class="bdots">&bullet;</span>M O S T<span class="featuredtxt">R E Q U E S T E D</span>&bullet;</h1>
-	</div>
-	<div class="feturedimage">
-		<div class="row firstrow">
-			<div class="col-lg-6 costumcol colborder1">
-				<div class="row costumrow">
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img1colon">
-						<img src="image/photoscameras.jpg" alt="cameras">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 txt1colon ">
-						<div class="featurecontant">
-							<h1>PHOTOGRAPHY</h1>
-							<p>Discover our photography services<br>
-			 						that will capture the moments<br>
-you wish to treasure</p>
-			 				<button id="btnRM" onclick="rmtxt()">READ MORE</button>
-			 				<div id="readmore">
-			 						<h1>JONATHAN'S STUDIO</h1>
-			 						<p>We offer professional photography services tailored for every occasion—from timeless portraits and milestone moments like graduations, engagements, and weddings, to high-quality product photography that showcases your brand at its best. Each session includes expert photo editing to ensure your images look polished and vibrant. In addition, we offer a curated selection of stunning landscape prints available for purchase, perfect for bringing natural beauty into your space.<br>
-			 						</p>
-			 						<button id="btnRL">READ LESS</button>
-			 				</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 costumcol colborder2">
-				<div class="row costumrow">
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img2colon">
-						<img src="image/CEEC Logo.png" alt="CEEC Logo">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 txt1colon ">
-						<div class="featurecontant">
-							<h1>CARMEN ELISE'S <br>
-EXTRAORDINARY CREATIONS</h1>
-							<p>Handcrafted bracelets to match your personality,<br>
- style, and that special occassion.</p>
-			 				<button id="btnRM2">READ MORE</button>
-			 				<div id="readmore2">
-			 						<h1>CEEC</h1>
-			 						<p>Offers a vibrant collection of handmade products designed to express personality and style. From colorful, hand-crafted bracelets made with polymer and plastic beads to custom wooden signs featuring unique textures and painted details, each item is made with care and creativity. Whether you're looking to accessorize, decorate, or give a one-of-a-kind gift, CEEC delivers pieces that are bold, fun, and full of character.<br></p>
-			 						<button id="btnRL2">READ LESS</button>
-			 				</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-</section>
 	<!-- ______________________________________________________Bottom Menu ______________________________-->
 	<div class="bottommenu">
 		<div class="bottomlogo">
