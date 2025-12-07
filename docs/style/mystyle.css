@@ -1804,3 +1804,17 @@ footer {
     .footer-bottom {
         margin-top: 20px;
     }
+/* Center the big header.png logo on wider screens */
+@media (min-width: 768px) {
+  .topnavbar .navbar-header {
+    float: none;          /* cancel Bootstrap's float:left */
+    width: 100%;          /* let it span the full navbar */
+    text-align: center;   /* center its contents */
+  }
+
+  .topnavbar .navbar-header img {
+    display: inline-block;
+    width: auto;          /* let the image size itself */
+    max-width: 100%;      /* but never overflow */
+  }
+}
