@@ -8,6 +8,27 @@
  Template: GARAGE
  */
 
+/* Mobile fixes for home carousel caption */
+@media (max-width: 768px) {
+  #carousel-up .carousel-caption {
+    bottom: 1.25rem;          /* was probably a big % – bring it up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding-bottom: 1.5rem;   /* extra space so the button isn't on the edge */
+  }
+
+  #carousel-up .carousel-caption h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #carousel-up .carousel-caption p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
 
 .allcontain{
 	max-width: 1366px;
