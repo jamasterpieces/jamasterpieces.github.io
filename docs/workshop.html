@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jonathan's Workshop – J &amp; A Masterpieces LLC</title>
+  <meta name="description" content="Inventory and project catalog for Jonathan's Workshop – GlowVault, ShelfSmith, chess sets, Shadow Nest, and other crafted builds.">
+  <meta name="author" content="Jonathan Escobedo">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same global stack as your other pages -->
+  <link rel="stylesheet" type="text/css" href="source/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="source/font-awesome-4.5.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style/slider.css">
+  <link rel="stylesheet" type="text/css" href="style/mystyle.css">
+  <link rel="icon" type="image/png" href="image/icon.png">
+  <link rel="preload" href="assets/style.css" as="style" />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    :root {
+      --maxw: 1100px;
+      --gap: 1rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #111;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+
+    header.hero {
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+
+    header.hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+    }
+
+    header.hero p {
+      color: #555;
+      margin: .5rem 0 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid #111;
+    }
+
+    .btn.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.ghost {
+      background: #fff;
+      color: #111;
+    }
+
+    .grid {
+      display: grid;
+      gap: var(--gap);
+    }
+
+    .grid.cols-3 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    section h2 {
+      margin: 2rem 0 .75rem;
+      font-size: 1.5rem;
+    }
+
+    .muted { color: #666; }
+
+    .card {
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 1rem;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: .5rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: .5rem .4rem;
+      border-bottom: 1px solid #eee;
+      font-size: .95rem;
+    }
+
+    th {
+      font-weight: 700;
+      color: #444;
+    }
+
+    .status-pill {
+      display: inline-block;
+      padding: .15rem .5rem;
+      border-radius: 999px;
+      font-size: .8rem;
+      line-height: 1.2;
+      border: 1px solid rgba(0,0,0,.15);
+      background: #f7f7f7;
+    }
+
+    .status-active    { background:#e7f7ec; border-color:#9ccfa9; }
+    .status-prototype { background:#fff5e0; border-color:#e1c38f; }
+    .status-paused    { background:#f9e3e3; border-color:#e5a5a5; }
+    .status-idea      { background:#e6eefc; border-color:#9fb5f0; }
+
+    .legend-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .5rem;
+      font-size: .9rem;
+    }
+
+    .legend-list li {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 3rem 0 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Brand header image -->
+  <img src="image/Header.png" alt="J &amp; A Masterpieces header" width="100%">
+
+  <!-- HERO -->
+  <header class="hero wrap">
+    <h1>Jonathan's Workshop</h1>
+    <p class="muted">
+      The build bench for GlowVault, ShelfSmith, chess sets, Shadow Nest, and other hands-on projects —
+      part catalog, part lab notebook.
+    </p>
+  </header>
+
+  <main class="wrap">
+
+    <!-- OVERVIEW -->
+    <section class="card">
+      <h2>Overview</h2>
+      <p class="muted">
+        This page tracks the main builds and components coming out of Jonathan's Workshop. It isn’t a full
+        storefront — it’s a snapshot of what exists, what’s in testing, and what’s on deck for future runs.
+      </p>
+      <p class="muted">
+        Use it as an internal inventory, a reference for future listings, or a way to show curious customers
+        how deep the workshop goes.
+      </p>
+    </section>
+
+    <!-- COLLECTIONS GRID -->
+    <section class="card" style="margin-top:1rem;">
+      <h2>Collections</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>GlowVault Series</h3>
+          <p class="muted">
+            Backlit trading card displays — frame styles, finishes, plaques, and hardware.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>ShelfSmith Series</h3>
+          <p class="muted">
+            Book-nook style inserts and components: frames, panels, wiring parts, and scene layers.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>The 64 Squares Project</h3>
+          <p class="muted">
+            Chess boards, tiles, and future piece sets blending laser work and 3D printing.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Shadow Nest (Candle Box)</h3>
+          <p class="muted">
+            Small illuminated cubes with silhouette cutouts — prototype boxes, inserts, and themes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Blanks &amp; Parts</h3>
+          <p class="muted">
+            Laser-cut blanks, jigs, spacers, frames, and other reusable workshop components.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Prototypes &amp; Experiments</h3>
+          <p class="muted">
+            One-off builds, test cuts, and idea pieces worth tracking for future versions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS LEGEND -->
+    <section class="card" style="margin-top:1rem;">
+      <h2>Status Legend</h2>
+      <ul class="legend-list">
+        <li>
+          <span class="status-pill status-active">Active</span>
+          <span>Currently buildable / ready for orders.</span>
+        </li>
+        <li>
+          <span class="status-pill status-prototype">Prototype</span>
+          <span>In testing; details may change.</span>
+        </li>
+        <li>
+          <span class="status-pill status-paused">Paused</span>
+          <span>On hold while other projects take priority.</span>
+        </li>
+        <li>
+          <span class="status-pill status-idea">Concept</span>
+          <span>Documented idea; not yet in production.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- GLOWVAULT INVENTORY -->
+    <section id="glowvault" class="card" style="margin-top:1rem;">
+      <h2>GlowVault Series Inventory</h2>
+      <p class="muted">
+        Backlit card frames, variant finishes, and display options. Duplicate rows as you add units or SKUs.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Code</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Finish / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Single-card frame – v3</td>
+            <td>Frame / housing</td>
+            <td><span class="status-pill status-prototype">Prototype</span></td>
+            <td>Standard size; current wiring layout; plaque centered</td>
+          </tr>
+          <tr>
+            <td>Single-card frame – production</td>
+            <td>Frame / housing</td>
+            <td><span class="status-pill status-active">Active</span></td>
+            <td>Finalized cut file and hardware list</td>
+          </tr>
+          <!-- Add more GlowVault items here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SHELFSMITH INVENTORY -->
+
+    <section id="shelfsmith" class="card" style="margin-top:1rem;">
+      <h2>ShelfSmith Series Inventory</h2>
+      <p class="muted">
+        Core book-nook components and scenes. Use this section to track which parts are ready to batch and
+        which are still in design.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Code</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SS-FRAME-V2</td>
+            <td>Outer frame</td>
+            <td><span class="status-pill status-active">Active</span></td>
+            <td>Updated opening shape; sized for current light shelf design</td>
+          </tr>
+          <tr>
+            <td>Scene 1 – "The Journey"</td>
+            <td>Scene set</td>
+            <td><span class="status-pill status-prototype">Prototype</span></td>
+            <td>Travelers silhouette; wiring plan in notebook</td>
+          </tr>
+          <!-- Add more ShelfSmith parts and scenes here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 64 SQUARES INVENTORY -->
+    <section id="sixty-four-squares" class="card" style="margin-top:1rem;">
+      <h2>The 64 Squares Project</h2>
+      <p class="muted">
+        Chess-related builds: boards, tiles, inlays, and future piece sets. Great place to log materials,
+        sizes, and version numbers.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Code</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Board v1 – Baltic birch</td>
+            <td>Board</td>
+            <td><span class="status-pill status-prototype">Prototype</span></td>
+            <td>Laser-engraved grid; testing tile inlay options</td>
+          </tr>
+          <!-- Add more chess items here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SHADOW NEST INVENTORY -->
+    <section id="shadow-nest" class="card" style="margin-top:1rem;">
+      <h2>Shadow Nest (Candle Box)</h2>
+      <p class="muted">
+        Cube lanterns and silhouette panels. Use this block to track themes, sizes, and which designs are
+        safe for tealights vs. LED only.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Code</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SN-CUBE-3IN</td>
+            <td>Cube body</td>
+            <td><span class="status-pill status-prototype">Prototype</span></td>
+            <td>3&quot; x 3&quot; x 3&quot;; open bottom; sized for LED tealight</td>
+          </tr>
+          <!-- Add more Shadow Nest / candle box parts here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BLANKS & PARTS INVENTORY -->
+    <section id="blanks" class="card" style="margin-top:1rem;">
+      <h2>Blanks &amp; Parts</h2>
+      <p class="muted">
+        Reusable pieces that feed multiple product lines — blanks, jigs, spacers, plaques, and other
+        workshop essentials.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Code</th>
+            <th>Material</th>
+            <th>Status</th>
+            <th>Used In</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PLAQUE-SM-OVAL</td>
+            <td>3 mm birch</td>
+            <td><span class="status-pill status-active">Active</span></td>
+            <td>GlowVault, ShelfSmith, custom signs</td>
+          </tr>
+          <!-- Add more blanks / shared parts here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PROTOTYPES / EXPERIMENTS -->
+    <section id="prototypes" class="card" style="margin-top:1rem;">
+      <h2>Prototypes &amp; Experiments</h2>
+      <p class="muted">
+        One-off builds and tests you don’t want to forget. Great for revisiting “almost there” ideas later.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Item / Nickname</th>
+            <th>Line</th>
+            <th>Status</th>
+            <th>What You Learned</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"G03" test unit</td>
+            <td>GlowVault</td>
+            <td><span class="status-pill status-prototype">Prototype</span></td>
+            <td>Confirmed plaque placement and lighting angles; base warp noted</td>
+          </tr>
+          <!-- Log more experiments here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="card" style="margin-top:1rem;">
+      <h2>Questions or Custom Builds</h2>
+      <p class="muted">
+        See something here you’d like to turn into a full commission, or need a variation for your space?
+        Reach out and reference the item name or code from this page.
+      </p>
+      <p>
+        <a class="btn primary" href="mailto:jamasterpieces@gmail.com?subject=Jonathan%27s%20Workshop%20Inquiry">
+          Email Jonathan
+        </a>
+        <a class="btn ghost" href="contact.html">Contact form</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (same pattern as other pages) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li><br>
+          <li><a href="products.html">Products</a></li><br>
+          <li><a href="services.html">Services</a></li><br>
+          <li><a href="about.html">About</a></li><br>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/people/J-and-A-Masterpieces-LLC/61577099068316/" target="_blank">Facebook</a></li><br>
+          <li><a href="https://x.com/jamasterpieces" target="_blank">Twitter/X</a></li><br>
+          <li><a href="https://www.instagram.com/jamasterpieces/" target="_blank">Instagram</a></li><br>
+          <li><a href="https://www.youtube.com/@JAMasterpieces" target="_blank">YouTube</a></li><br>
+          <li><a href="#" target="_blank">LinkedIn</a></li><br>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"></div>
+  </footer>
+
+  <div class="footer">
+    <div class="copyright">
+      &copy; Copyright 2025 |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms and conditions</a>
+    </div>
+    <div class="atisda">
+      Designed by <a href="http://www.webdomus.net/">Web Domus Italia - Web Agency</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.js"></script>
+  <script type="text/javascript" src="source/js/isotope.js"></script>
+  <script type="text/javascript" src="source/js/myscript.js"></script>
+  <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.1.11.js"></script>
+  <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+</body>
+</html>
