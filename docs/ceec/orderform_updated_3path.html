@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CEEC — Order Form</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" href="images/icon.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Keep the form hidden until you're ready to launch.
+			   Remove this class from the <section> to go live. */
+			.ceec-form-disabled { display: none; }
+
+			/* Simple helper text styling (Phantom-friendly) */
+			.ceec-helper { opacity: .8; margin-top: .25rem; }
+			.ceec-note { border: 1px solid rgba(255,255,255,.15); border-radius: .25em; padding: .9rem; background: rgba(255,255,255,.03); }
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<p><a href="https://www.jamasterpieces.com">J &amp; A Masterpieces LLC</a> presents:</p>
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/logo.svg" width="200" alt="logo" /></span>
+						<span class="title">Carmen Elise's Extraordinary Creations</span>
+					</a>
+
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="classic.html">Classic</a></li>
+					<li><a href="polymer.html">Polymer</a></li>
+					<li><a href="keychains.html">Keychains</a></li>
+					<li><a href="artwork.html">Artwork</a></li>
+					<li><a href="orderform.html">Order Form</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About CEEC</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Public-facing placeholder (keep while form is offline) -->
+					<header>
+						<h1>Order Form (Coming Soon)</h1>
+						<p>Our online order form is being polished. For now, please use the <a href="contact.html">Contact Us page</a>.</p>
+					</header>
+
+					<!-- ======================================================
+						CEEC Order Form — Agreed Structure (3 paths)
+						To LAUNCH: remove the class "ceec-form-disabled" below,
+						and update the Formspree action URL.
+					====================================================== -->
+						<div class="ceec-note">
+							<strong>Heads up!</strong> Some custom color requests may take an extra <strong>2–3 business days</strong>
+							to make sure everything turns out just right.
+						</div>
+						<br/>
+
+						<form id="orderForm" method="POST" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID">
+							<!-- Honeypot (spam trap) -->
+							<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off" />
+
+							<div class="row gtr-uniform">
+
+								<!-- Customer info -->
+								<div class="col-6 col-12-xsmall">
+									<label for="name">Full Name</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="phone">Phone (optional)</label>
+									<input type="tel" name="phone" id="phone" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="deadline">Need-by Date (optional)</label>
+									<input type="date" name="deadline" id="deadline" />
+								</div>
+
+								<!-- Bracelet type switch -->
+								<div class="col-6 col-12-xsmall">
+									<label for="braceletType">Bracelet Type</label>
+									<select name="bracelet_type" id="braceletType" required>
+										<option value="" disabled selected>Choose…</option>
+										<option value="acrylic">Acrylic</option>
+										<option value="paracord">Paracord</option>
+										<option value="polymer">Polymer</option>
+									</select>
+									<p class="ceec-helper">This choice controls which options appear next.</p>
+								</div>
+
+								<div class="col-3 col-6-xsmall">
+									<label for="quantity">Quantity</label>
+									<input type="number" name="quantity" id="quantity" min="1" value="1" required />
+								</div>
+
+								<div class="col-3 col-6-xsmall">
+									<label for="size">Wrist Size</label>
+									<select name="size" id="size" required>
+										<option value="" disabled selected>Select…</option>
+										<option>XS (7")</option>
+										<option>S (7.5")</option>
+										<option>M (8")</option>
+										<option>L (8.5")</option>
+										<option>XL (9")</option>
+									</select>
+								</div>
+
+								<!-- ================= Acrylic path ================= -->
+								<div class="col-12" id="acrylicSection" style="display:none;">
+									<hr/>
+									<h2 style="margin-bottom:.25rem;">Acrylic Bracelet Details</h2>
+									<p class="ceec-helper">Describe what you're imagining — colors, vibe, theme, or anything you like.</p>
+
+									<label for="acrylicDesc">Your Bracelet Idea</label>
+									<textarea name="acrylic_description" id="acrylicDesc" rows="6"
+										placeholder="Example: ‘Pink and white, beachy vibe, maybe a smiley bead if you have one.’"></textarea>
+									<p class="ceec-helper">CEEC will do her best to create your acrylic bracelet based on your description and available materials.</p>
+								</div>
+
+								<!-- ================= Paracord path ================= -->
+								<div class="col-12" id="paracordSection" style="display:none;">
+									<hr/>
+									<h2 style="margin-bottom:.25rem;">Paracord Bracelet Details</h2>
+									<p class="ceec-helper">Choose your knot, clip, and colors. (We’ll add reference photos to these dropdowns later.)</p>
+
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<label for="knotType">Knot Style</label>
+											<select name="paracord_knot" id="knotType">
+												<option value="" disabled selected>Select…</option>
+												<!-- TODO: add knot options (cobra, king cobra, fishtail, etc.) -->
+											</select>
+										</div>
+
+										<div class="col-6 col-12-xsmall">
+											<label for="clipType">Clip Type</label>
+											<select name="paracord_clip" id="clipType">
+												<option value="" disabled selected>Select…</option>
+												<option>Plastic</option>
+												<option>Metal (Antique Brass)</option>
+												<option>Metal (Black)</option>
+												<option>Metal (Chrome)</option>
+												<option>Metal (Gold)</option>
+												<option>Metal (Rose Gold)</option>																				
+												<option>Fantasy (Dragon)</option>
+												<option>Fantasy (Eagle skull)</option>
+												<option>Fantasy (Wolf)</option>
+											</select>
+										</div>
+
+										<div class="col-4 col-12-xsmall">
+											<label for="color1">Color 1</label>
+											<select name="paracord_color_1" id="color1">
+												<option value="" disabled selected>Select…</option>
+												<!-- TODO: add paracord colors -->
+											</select>
+										</div>
+
+										<div class="col-4 col-12-xsmall">
+											<label for="color2">Color 2</label>
+											<select name="paracord_color_2" id="color2">
+												<option value="" disabled selected>Select…</option>
+												<!-- TODO: add paracord colors -->
+											</select>
+										</div>
+
+										<div class="col-4 col-12-xsmall">
+											<label for="color3">Color 3 (Inside Accent — optional)</label>
+											<select name="paracord_color_3" id="color3">
+												<option value="" selected>None</option>
+												<!-- TODO: add paracord colors -->
+											</select>
+											<p class="ceec-helper">Inside accent is minimally visible and adds build time.</p>
+										</div>
+									</div>
+
+									<p class="ceec-helper"><em>Reference photos placeholder:</em> later you can add a small image grid on this page for colors, clips, and knots.</p>
+								</div>
+
+								<!-- ================= Polymer path ================= -->
+								<div class="col-12" id="polymerSection" style="display:none;">
+									<hr/>
+									<h2 style="margin-bottom:.25rem;">Polymer Bracelet Details</h2>
+									<p class="ceec-helper">Choose from available clay colors. Final patterns may vary slightly for comfort and durability.</p>
+
+									<div class="row gtr-uniform">
+										<div class="col-4 col-12-xsmall">
+											<label for="polyPrimary">Primary Color</label>
+											<select name="polymer_primary" id="polyPrimary">
+												<option value="" disabled selected>Select…</option>
+												<!-- TODO: add polymer clay colors -->
+											</select>
+										</div>
+
+										<div class="col-4 col-12-xsmall">
+											<label for="polySecondary">Secondary Color (optional)</label>
+											<select name="polymer_secondary" id="polySecondary">
+												<option value="" selected>None</option>
+												<!-- TODO: add polymer clay colors -->
+											</select>
+										</div>
+
+										<div class="col-4 col-12-xsmall">
+											<label for="polyAccent">Accent Color (optional)</label>
+											<select name="polymer_accent" id="polyAccent">
+												<option value="" selected>None</option>
+												<!-- TODO: add polymer clay colors -->
+											</select>
+										</div>
+									</div>
+
+									<p class="ceec-helper"><em>Reference photos placeholder:</em> later you can add a small image grid on this page for polymer color options.</p>
+								</div>
+
+								<!-- Global notes -->
+								<div class="col-12">
+									<hr/>
+									<label for="notes">Anything Else We Should Know? (optional)</label>
+									<textarea name="notes" id="notes" placeholder="Gift note, theme, matching set, special requests, etc."></textarea>
+								</div>
+
+								<!-- Actions -->
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Send Order Request" class="primary" /></li>
+										<li><a href="#" class="button" id="saveBtn">Save as PDF</a></li>
+									</ul>
+									<p id="alertSuccess" style="display:none;color:#2e7d32;"><strong>Thanks!</strong> Your request was sent. We’ll reply soon.</p>
+									<p id="alertError" style="display:none;color:#c62828;"><strong>Oops.</strong> Something went wrong—check the form and try again.</p>
+								</div>
+							</div>
+
+							<!-- Meta -->
+							<input type="hidden" name="_subject" value="New CEEC Order Request" />
+							<input type="hidden" name="site" value="jamasterpieces.com/ceec" />
+						</form>
+
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; CEEC / J &amp; A Masterpieces LLC.</li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			const form = document.getElementById('orderForm');
+			const braceletType = document.getElementById('braceletType');
+
+			const acrylicSection = document.getElementById('acrylicSection');
+			const paracordSection = document.getElementById('paracordSection');
+			const polymerSection  = document.getElementById('polymerSection');
+
+			// Paracord fields
+			const knotType = document.getElementById('knotType');
+			const clipType = document.getElementById('clipType');
+			const color1 = document.getElementById('color1');
+			const color2 = document.getElementById('color2');
+
+			// Polymer fields
+			const polyPrimary = document.getElementById('polyPrimary');
+
+			// Acrylic field
+			const acrylicDesc = document.getElementById('acrylicDesc');
+
+			function setRequired(el, isReq){
+				if(!el) return;
+				if(isReq) el.setAttribute('required', 'required');
+				else el.removeAttribute('required');
+			}
+
+			function hideAll(){
+				acrylicSection.style.display = 'none';
+				paracordSection.style.display = 'none';
+				polymerSection.style.display = 'none';
+
+				setRequired(acrylicDesc, false);
+				setRequired(knotType, false);
+				setRequired(clipType, false);
+				setRequired(color1, false);
+				setRequired(color2, false);
+				setRequired(polyPrimary, false);
+			}
+
+			function showPath(){
+				hideAll();
+				const val = braceletType.value;
+				if(val === 'acrylic'){
+					acrylicSection.style.display = 'block';
+					setRequired(acrylicDesc, true);
+				}
+				if(val === 'paracord'){
+					paracordSection.style.display = 'block';
+					setRequired(knotType, true);
+					setRequired(clipType, true);
+					setRequired(color1, true);
+					setRequired(color2, true);
+				}
+				if(val === 'polymer'){
+					polymerSection.style.display = 'block';
+					setRequired(polyPrimary, true);
+				}
+			}
+
+			braceletType.addEventListener('change', showPath);
+
+			// Save as PDF (browser print)
+			document.getElementById('saveBtn').addEventListener('click', e => {
+				e.preventDefault();
+				window.print();
+			});
+
+			// Submit async to Formspree
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				document.getElementById('alertSuccess').style.display = 'none';
+				document.getElementById('alertError').style.display = 'none';
+
+				// spam trap
+				if ((form.company && form.company.value)) {
+					document.getElementById('alertError').style.display = 'block';
+					return;
+				}
+
+				try {
+					const res = await fetch(form.action, {
+						method: 'POST',
+						body: new FormData(form),
+						headers: { 'Accept': 'application/json' }
+					});
+					if (res.ok) {
+						form.reset();
+						hideAll();
+						document.getElementById('alertSuccess').style.display = 'block';
+					} else {
+						document.getElementById('alertError').style.display = 'block';
+					}
+				} catch {
+					document.getElementById('alertError').style.display = 'block';
+				}
+			});
+		</script>
+	</body>
+</html>
