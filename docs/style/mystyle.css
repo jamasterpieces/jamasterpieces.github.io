@@ -1839,3 +1839,35 @@ footer {
     max-width: 100%;      /* but never overflow */
   }
 }
+
+/* Center navbar items in Bootstrap 3 */
+.topnavbar .navbar-collapse {
+  text-align: center;
+}
+
+.topnavbar .navbar-nav {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;           /* IMPORTANT: overrides Bootstrap's -15px side margins */
+}
+
+.topnavbar .navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* NAVBAR CENTERING FIX (override template offsets) */
+.topnavbar .container{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#navbarontop{
+  padding-left: 0 !important;
+}
+
+/* Optional: reduce per-link drift */
+#navbarontop > li > a{
+  margin-left: 0 !important; /* we can re-add spacing cleanly after it's centered */
+}
