@@ -1,224 +1,499 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>J &amp; A Masterpieces LLC</title>
-	<meta name="description" content="J & A Masterpieces: A family-run, veteran-owned business crafting artisan wood décor and providing photography & digital media services.">
-	<meta name="author" content="Web Domus Italia">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="source/bootstrap-3.3.6-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="source/font-awesome-4.5.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="style/slider.css">
-	<link rel="stylesheet" type="text/css" href="style/mystyle.css">
-	<link rel="icon" type="image/png" href="image/icon.png">
-	<link rel="preload" href="assets/css/base.css" as="style" />
-<link rel="stylesheet" href="assets/css/base.css" />
-<style>
-:root { --maxw: 1100px; --gap: 1rem; }
-body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 1.25rem; }
-header.hero { padding: 3rem 0 2rem; text-align: center; }
-header.hero h1 { margin:0; font-size: clamp(2rem, 3vw + 1rem, 3rem); }
-header.hero p { color:#555; margin:.5rem 0 0; }
+    <meta charset="UTF-8">
+    <title>Custom Laser Engraving | J &amp; A Masterpieces LLC</title>
+    <meta name="description" content="Custom laser engraving on wood, acrylic, leather, slate, coated metals, and more. Request a personalized quote from J & A Masterpieces LLC.">
+    <meta name="author" content="J &amp; A Masterpieces LLC">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="source/bootstrap-3.3.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="source/font-awesome-4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+    <link rel="stylesheet" type="text/css" href="style/mystyle.css">
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <link rel="preload" href="assets/css/base.css" as="style">
+    <link rel="stylesheet" href="assets/css/base.css">
 
-.btn { display:inline-block; padding:.6rem 1rem; border-radius:10px; text-decoration:none; font-weight:700; border:1px solid #111; }
-.btn.primary { background:#111; color:#fff; }
-.btn.ghost { background:#fff; color:#111; }
+    <style>
+        :root {
+            --maxw: 1100px;
+            --gap: 1rem;
+            --ink: #111;
+            --muted: #666;
+            --border: #e6e6e6;
+            --soft: #f7f7f7;
+        }
 
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--ink);
+        }
 
-.grid { display:grid; gap: var(--gap); }
-.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 1.25rem;
+        }
 
+        header.hero {
+            padding: 2.5rem 0 2rem;
+            text-align: center;
+        }
 
-section h2 { margin: 2rem 0 .75rem; font-size: 1.5rem; }
-.muted { color:#666; }
-.card { border:1px solid #e6e6e6; border-radius:12px; padding:1rem; background:#fff; box-shadow: 0 1px 4px rgba(0,0,0,.05); }
-table { width:100%; border-collapse: collapse; }
-th, td { text-align:left; padding:.6rem .5rem; border-bottom:1px solid #eee; }
-th { font-size:.95rem; color:#444; font-weight:700; }
-td { font-size:.95rem; }
-.price { white-space:nowrap; font-weight:700; }
-.note { font-size:.9rem; color:#666; }
-.kicker { font-size:.95rem; color:#444; margin:.25rem 0 0; }
+        header.hero h1 {
+            margin: 1.25rem 0 0;
+            font-size: clamp(2rem, 3vw + 1rem, 3rem);
+        }
 
+        header.hero p {
+            color: #555;
+            margin: .75rem auto 0;
+            max-width: 760px;
+        }
 
-.thumbs { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:.75rem; }
-.thumb { border:1px dashed #ccc; border-radius:10px; padding:.5rem; aspect-ratio: 1/1; display:flex; align-items:center; justify-content:center; font-size:.9rem; color:#777; }
+        .btn {
+            display: inline-block;
+            padding: .7rem 1.1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--ink);
+            margin: .25rem;
+        }
 
+        .btn.primary {
+            background: var(--ink);
+            color: #fff;
+        }
 
-footer { text-align:center; color:#666; padding:3rem 0 2rem; }
-</style>
+        .btn.ghost {
+            background: #fff;
+            color: var(--ink);
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--gap);
+        }
+
+        .grid.cols-2 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .grid.cols-3 {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        section h2 {
+            margin: 0 0 .75rem;
+            font-size: 1.6rem;
+        }
+
+        section h3 {
+            margin: .25rem 0 .5rem;
+            font-size: 1.1rem;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+        }
+
+        .section-space {
+            margin-top: 1rem;
+        }
+
+        .kicker {
+            font-size: .95rem;
+            color: #444;
+            margin: .25rem 0 0;
+        }
+
+        .note {
+            font-size: .9rem;
+            color: var(--muted);
+        }
+
+        .cta-panel {
+            text-align: center;
+            padding: 1.75rem;
+            background: var(--soft);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: .85rem;
+            margin-top: 1rem;
+        }
+
+        .step {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+            background: var(--soft);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: .65rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: .65rem .5rem;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        th {
+            font-size: .95rem;
+            color: #444;
+            font-weight: 700;
+        }
+
+        td {
+            font-size: .95rem;
+        }
+
+        .price {
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        .material-list {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .material-list li {
+            margin-bottom: .45rem;
+        }
+
+        .legal-note {
+            border-left: 4px solid #111;
+            padding: .85rem 1rem;
+            background: var(--soft);
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 3rem 0 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .wrap {
+                padding: 1rem;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+
+            th,
+            td {
+                padding: .55rem .35rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
- <header class="hero wrap">
- <img src="image/Header.png" alt="logo" width="100%">
-   <h1>Laser Engraving</h1>
-    <p class="muted">Clean, precise engraving on wood, acrylic, leather, and more — fast turnaround available.</p>
-    <p style="margin-top:1rem">
-      <a class="btn primary" href="#quote">Request a quote</a>
-      <a class="btn ghost" href="index.html">Back to Home</a>
-    </p>
-  </header>
-  <main class="wrap">
-    <!-- PRICING OVERVIEW -->
-    <section id="pricing" class="card">
-      <h2>Pricing</h2>
-      <p class="kicker">Clear base pricing with simple add‑ons. One‑off pieces welcome; bulk discounts available.</p>
-      <div class="grid cols-2" style="margin-top: .5rem;">
-        <div>
-          <table aria-label="Base engraving prices">
-            <thead>
-              <tr><th>Service</th><th>Details</th><th>Price</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Simple Text (up to 2 lines)</strong></td>
-                <td>On customer‑supplied pallet/wood. Quick turnaround.</td>
-                <td class="price">$40</td>
-              </tr>
-              <tr>
-                <td><strong>Custom Layout / Logo</strong></td>
-                <td>Includes up to 30 minutes of setup (vector prep, sizing).</td>
-                <td class="price">$60+</td>
-              </tr>
-              <tr>
-                <td><strong>Additional Design Time</strong></td>
-                <td>For complex artwork beyond included setup.</td>
-                <td class="price">$30/hr</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <table aria-label="Add-ons">
-            <thead>
-              <tr><th>Add‑on</th><th>Details</th><th>Price</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Rush Turnaround</strong></td>
-                <td>24–48 hours when capacity allows.</td>
-                <td class="price">+$15</td>
-              </tr>
-              <tr>
-                <td><strong>Hand‑Painted Fill</strong></td>
-                <td>Painted letters or icons after laser scoring (single color).</td>
-                <td class="price">+$15 / piece</td>
-              </tr>
-              <tr>
-                <td><strong>Extra Paint Colors</strong></td>
-                <td>Per additional color beyond single‑color fill.</td>
-                <td class="price">+$5 / color</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <p class="note" style="margin-top:.5rem;">Note: The <strong>$40 simple‑text</strong> price reflects what we discussed: name/number or similar, up to two lines, on a pallet/wood piece you provide. Custom pieces, materials we source, and unusually large engraves are quoted individually.</p>
-    </section>
+    <header class="hero wrap">
+        <img src="image/Header.png" alt="J &amp; A Masterpieces LLC logo" width="100%">
 
-    <!-- WHAT WE ENGRAVE -->
-    <section id="materials" class="grid cols-2" style="margin-top:1rem;">
-      <div class="card">
-        <h2>Common Materials</h2>
-        
-<div class="grid cols-2" style="margin-top:.5rem;">
-  <div>
-    <h3 style="margin:.25rem 0 .5rem; font-size:1.1rem;">Great candidates</h3>
-    <ul class="muted" style="margin:0; padding-left:1.1rem;">
-      <li><strong>Wood</strong> (pine, oak, birch, maple, bamboo)</li>
-      <li><strong>Acrylic</strong> (cast preferred for crisp edges)</li>
-      <li><strong>Leather</strong> (veg‑tan engraves best)</li>
-      <li><strong>Painted / powder‑coated items</strong> (we remove the top coat to reveal contrast)</li>
-      <li><strong>Anodized aluminum</strong> (marking)</li>
-      <li><strong>Slate / stone</strong> (marking)</li>
-    </ul>
-  </div>
-  <div>
-    <h3 style="margin:.25rem 0 .5rem; font-size:1.1rem;">Common items we do <em>not</em> engrave</h3>
-    <ul class="muted" style="margin:0; padding-left:1.1rem;">
-      <li><strong>PVC / vinyl</strong> (including “pleather” or vinyl‑coated items)</li>
-      <li><strong>Rubber</strong> that produces heavy odor/smoke (case‑by‑case only)</li>
-      <li><strong>Clear polycarbonate</strong> (often melts/chars; acrylic is the better substitute)</li>
-      <li><strong>Bare, shiny metals</strong> like stainless steel, brass, copper (deep engraving requires different equipment)</li>
-      <li><strong>Unknown plastics</strong> without a safe ID stamp (we won’t risk harmful fumes)</li>
-    </ul>
-  </div>
-</div>
-<p class="note" style="margin-top:.75rem;">
-  Not sure what your item is made of? Send a photo and a link to the product listing (if you have it). We’ll confirm compatibility before you buy.
-</p>
-</div>
-      <div class="card">
-        <h2>Artwork &amp; File Types</h2>
-        <p class="muted">Vector files (SVG, AI, PDF) are ideal. High‑res PNG/JPG (at least 300 DPI) also works. We can help convert.</p>
-      </div>
-    </section>
+        <h1>Custom Laser Engraving</h1>
 
-    <!-- HOW IT WORKS -->
-    <section id="process" class="card" style="margin-top:1rem;">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step"><strong>1) Send your idea</strong> — A quick description and a reference photo or file gets us started.</div>
-        <div class="step"><strong>2) Proof &amp; approval</strong> — We send a layout proof. One round of tweaks is included with base pricing.</div>
-        <div class="step"><strong>3) Engrave &amp; finish</strong> — Typical lead time: 2–5 business days. Rush available when possible.</div>
-        <div class="step"><strong>4) Pickup or ship</strong> — Local pickup in the CSRA or ship to you (shipping extra).</div>
-      </div>
-    </section>
+        <p>
+            Personalized engraving for gifts, memorials, décor, business branding, and one-of-a-kind projects.
+            Send us the details and photos of your item so we can confirm compatibility and prepare an accurate quote.
+        </p>
 
-    <!-- CTA / QUOTE -->
-    <section id="quote" class="card" style="margin-top:1rem;">
-      <h2>Ready to start?</h2>
-      <p class="muted">Send a few details (material, size, text/art, deadline). We’ll reply with a fast quote.</p>
-      <p>
-        <a class="btn primary" href="mailto:jamasterpieces@gmail.com?subject=Engraving%20Quote%20Request">Email for a quote</a>
-        <a class="btn ghost" href="contact.html">Contact form</a>
-      </p>
-    </section>
-  </main>
-		<footer>
-    <div class="footer-container">
+        <p style="margin-top: 1rem;">
+            <a class="btn primary" href="mailto:jamasterpieces@gmail.com?subject=Engraving%20Quote%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20request%20a%20quote%20for%20an%20engraving%20project.%0A%0ACONTACT%20INFORMATION%0AName%3A%0APhone%20number%20%28optional%29%3A%0A%0APROJECT%20DETAILS%0AItem%20description%3A%0AMaterial%20%28if%20known%29%3A%0AApproximate%20dimensions%3A%0AQuantity%3A%0AAre%20you%20providing%20the%20item%3F%20Yes%20/%20No%0A%0AENGRAVING%20DETAILS%0AText%20to%20engrave%3A%0AArtwork%20or%20logo%3A%0AShould%20trademark%20symbols%20such%20as%20%C2%AE%20or%20%E2%84%A2%20be%20included%3F%20Yes%20/%20No%20/%20Not%20applicable%0ADo%20you%20own%20the%20artwork%20or%20have%20permission%20to%20reproduce%20it%3F%20Yes%20/%20No%20/%20Not%20applicable%0A%0ATIMELINE%20%26%20DELIVERY%0ADesired%20completion%20date%3A%0ALocal%20pickup%20or%20shipping%3A%0A%0ASPECIAL%20CONSIDERATIONS%0AIs%20the%20item%20sentimental%2C%20irreplaceable%2C%20or%20a%20memorial%20item%3F%20Yes%20/%20No%0AAdditional%20notes%3A%0A%0APlease%20attach%20clear%20photos%20of%20the%20item%2C%20including%20the%20area%20to%20be%20engraved%2C%20along%20with%20any%20artwork%20or%20logos.%0A">Start Your Quote</a>
+            <a class="btn ghost" href="index.html">Back to Home</a>
+        </p>
+    </header>
+
+    <main class="wrap">
+        <section id="process" class="card">
+            <h2>How It Works</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <strong>Start Your Quote</strong>
+                    <p class="muted">
+                        Describe the project and provide the material, dimensions, quantity, wording, deadline, and clear photos.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <strong>Compatibility Review</strong>
+                    <p class="muted">
+                        We review the item's material, shape, finish, size, and artwork before confirming that it can be engraved.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <strong>Quote &amp; Approval</strong>
+                    <p class="muted">
+                        You receive pricing and any important project notes. A layout proof is provided when the design requires one.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <strong>Engrave &amp; Deliver</strong>
+                    <p class="muted">
+                        After approval, your project is engraved, inspected, and prepared for local pickup or shipping.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="card section-space">
+            <h2>Pricing</h2>
+
+            <p class="kicker">
+                Every project is different. These prices provide starting points for common requests.
+                Final pricing may vary based on material, size, artwork, setup, quantity, and project complexity.
+            </p>
+
+            <div class="grid cols-2" style="margin-top: .75rem;">
+                <div>
+                    <table aria-label="Base engraving prices">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Details</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Simple Text</strong></td>
+                                <td>Up to two lines on a compatible customer-supplied item.</td>
+                                <td class="price">$40+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custom Layout / Logo</strong></td>
+                                <td>Includes up to 30 minutes of setup, sizing, and basic vector preparation.</td>
+                                <td class="price">$60+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Metal Marking</strong></td>
+                                <td>Permanent laser marking on compatible metal surfaces using a marking compound when required.</td>
+                                <td class="price">$55+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rotary Engraving</strong></td>
+                                <td>For compatible round items within equipment size and diameter limits.</td>
+                                <td class="price">$55+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custom Nameplates</strong></td>
+                                <td>Engraved plates for memorial items, displays, equipment, gifts, and other applications.</td>
+                                <td class="price">$30+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Additional Design Time</strong></td>
+                                <td>For complex artwork or preparation beyond the included setup.</td>
+                                <td class="price">$30/hr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <table aria-label="Engraving add-ons">
+                        <thead>
+                            <tr>
+                                <th>Add-on</th>
+                                <th>Details</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rush Turnaround</strong></td>
+                                <td>24 to 48 hours when capacity and project requirements allow.</td>
+                                <td class="price">+$15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hand-Painted Fill</strong></td>
+                                <td>Single-color painted letters, icons, or engraved details.</td>
+                                <td class="price">+$15 / piece</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Extra Paint Colors</strong></td>
+                                <td>Per additional color beyond the first.</td>
+                                <td class="price">+$5 / color</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Material Testing</strong></td>
+                                <td>May apply when the material or finish is unknown and safe testing is possible.</td>
+                                <td class="price">Quoted</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bulk Orders</strong></td>
+                                <td>Discounts may be available for repeated layouts or larger quantities.</td>
+                                <td class="price">Quoted</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="note" style="margin-top: .75rem;">
+                Customer-supplied items are accepted only after compatibility review. Irreplaceable or sentimental items may require additional precautions, testing, or an alternate solution such as an engraved nameplate.
+            </p>
+        </section>
+
+        <section id="materials" class="grid cols-2 section-space">
+            <div class="card">
+                <h2>Common Materials</h2>
+
+                <h3>Great candidates</h3>
+                <ul class="material-list muted">
+                    <li><strong>Wood</strong>, including pine, oak, birch, maple, and bamboo</li>
+                    <li><strong>Acrylic</strong>, with cast acrylic preferred for crisp results</li>
+                    <li><strong>Leather</strong>, especially vegetable-tanned leather</li>
+                    <li><strong>Painted or powder-coated items</strong></li>
+                    <li><strong>Anodized aluminum</strong></li>
+                    <li><strong>Slate and certain stone products</strong></li>
+                    <li><strong>Compatible metals</strong> using a laser marking compound when needed</li>
+                </ul>
+
+                <h3 style="margin-top: 1.1rem;">Common limitations</h3>
+                <ul class="material-list muted">
+                    <li><strong>PVC, vinyl, and unknown plastics</strong> are not accepted because they may release hazardous fumes.</li>
+                    <li><strong>Clear polycarbonate</strong> often melts or chars and is generally unsuitable.</li>
+                    <li><strong>Oversized or sharply curved objects</strong> may exceed equipment clearance or rotary limits.</li>
+                    <li><strong>Mirror-polished, plated, or delicate finishes</strong> require individual review.</li>
+                    <li><strong>Deep engraving into bare metal</strong> requires equipment different from our current laser system.</li>
+                </ul>
+
+                <p class="note" style="margin-top: .75rem;">
+                    Unsure about the material? Include photos, dimensions, and a product link when available.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Artwork &amp; Logos</h2>
+
+                <p class="muted">
+                    Vector files such as SVG, AI, and vector PDF are preferred. High-resolution PNG and JPG files may also work.
+                    Artwork cleanup or conversion may require additional design time.
+                </p>
+
+                <div class="legal-note">
+                    <strong>Artwork permission</strong>
+                    <p class="muted" style="margin: .4rem 0 0;">
+                        By submitting artwork, logos, characters, or other protected material, the customer confirms that they own the rights or have permission to reproduce it.
+                    </p>
+                </div>
+
+                <div class="legal-note">
+                    <strong>Trademark symbols</strong>
+                    <p class="muted" style="margin: .4rem 0 0;">
+                        Please specify whether symbols such as ® or ™ should be included. We will not assume that they are part of the requested engraving.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="card cta-panel section-space">
+            <h2>Ready to Start?</h2>
+
+            <p class="muted">
+                The more information you provide, the faster we can confirm compatibility and prepare an accurate quote.
+                The email template will prompt you for the details we need.
+            </p>
+
+            <p>
+                <a class="btn primary" href="mailto:jamasterpieces@gmail.com?subject=Engraving%20Quote%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20request%20a%20quote%20for%20an%20engraving%20project.%0A%0ACONTACT%20INFORMATION%0AName%3A%0APhone%20number%20%28optional%29%3A%0A%0APROJECT%20DETAILS%0AItem%20description%3A%0AMaterial%20%28if%20known%29%3A%0AApproximate%20dimensions%3A%0AQuantity%3A%0AAre%20you%20providing%20the%20item%3F%20Yes%20/%20No%0A%0AENGRAVING%20DETAILS%0AText%20to%20engrave%3A%0AArtwork%20or%20logo%3A%0AShould%20trademark%20symbols%20such%20as%20%C2%AE%20or%20%E2%84%A2%20be%20included%3F%20Yes%20/%20No%20/%20Not%20applicable%0ADo%20you%20own%20the%20artwork%20or%20have%20permission%20to%20reproduce%20it%3F%20Yes%20/%20No%20/%20Not%20applicable%0A%0ATIMELINE%20%26%20DELIVERY%0ADesired%20completion%20date%3A%0ALocal%20pickup%20or%20shipping%3A%0A%0ASPECIAL%20CONSIDERATIONS%0AIs%20the%20item%20sentimental%2C%20irreplaceable%2C%20or%20a%20memorial%20item%3F%20Yes%20/%20No%0AAdditional%20notes%3A%0A%0APlease%20attach%20clear%20photos%20of%20the%20item%2C%20including%20the%20area%20to%20be%20engraved%2C%20along%20with%20any%20artwork%20or%20logos.%0A">Start Your Quote</a>
+                <a class="btn ghost" href="contact.html">General Contact</a>
+            </p>
+
+            <p class="note">
+                Please attach clear photos of the full item and the exact area you would like engraved.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
             <div class="footer-section">
-            <h4>Navigation</h4>
-            <ul>
-				<li><a href="index.html">Home</a></li><br>
-  				<li><a href="products.html">Products</a></li><br>
-				<li><a href="services.html">Services</a></li><br>
-				<li><a href="about.html">About</a></li><br>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li><br>
+                    <li><a href="products.html">Products</a></li><br>
+                    <li><a href="services.html">Services</a></li><br>
+                    <li><a href="about.html">About</a></li><br>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/people/J-and-A-Masterpieces-LLC/61577099068316/" target="_blank" rel="noopener noreferrer">Facebook</a></li><br>
+                    <li><a href="https://x.com/jamasterpieces" target="_blank" rel="noopener noreferrer">Twitter/X</a></li><br>
+                    <li><a href="https://www.instagram.com/jamasterpieces/" target="_blank" rel="noopener noreferrer">Instagram</a></li><br>
+                    <li><a href="https://www.youtube.com/@JAMasterpieces" target="_blank" rel="noopener noreferrer">YouTube</a></li><br>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><br>
+                </ul>
+            </div>
         </div>
-        <div class="footer-section">
-            <h4>Follow</h4>
-            <ul>
-                <li><a href="https://www.facebook.com/people/J-and-A-Masterpieces-LLC/61577099068316/" target="_blank">Facebook</a></li><br>
-                <li><a href="https://x.com/jamasterpieces" target="_blank">Twitter/X</a></li><br>
-                <li><a href="https://www.instagram.com/jamasterpieces/" target="_blank">Instagram</a></li><br>
-				<li><a href="https://www.youtube.com/@JAMasterpieces" target="_blank">YouTube</a></li><br>
-                <li><a href="#" target="_blank">LinkedIn</a></li><br>
-				</ul>
+
+        <div class="footer-bottom"></div>
+    </footer>
+
+    <div class="footer">
+        <div class="copyright">
+            &copy; Copyright 2025 |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms and Conditions</a>
+        </div>
+
+        <div class="atisda">
+            Designed by <a href="http://www.webdomus.net/">Web Domus Italia - Web Agency</a>
         </div>
     </div>
-    <div class="footer-bottom">
-    </div>
-</footer>
-			<div class="footer">
-				<div class="copyright">
-				  &copy; Copyright 2025 | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and conditions</a>
-				</div>
-				<div class="atisda">
-					 Designed by <a href="http://www.webdomus.net/">Web Domus Italia - Web Agency </a> 
-				</div>
-			</div>
 
-<script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.js"></script>
-<script type="text/javascript" src="source/js/isotope.js"></script>
-<script type="text/javascript" src="source/js/myscript.js"></script> 
-<script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.1.11.js"></script>
-<script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
-
-	</body>
+    <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.js"></script>
+    <script type="text/javascript" src="source/js/isotope.js"></script>
+    <script type="text/javascript" src="source/js/myscript.js"></script>
+    <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/jquery.1.11.js"></script>
+    <script type="text/javascript" src="source/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+</body>
 </html>
