@@ -48,6 +48,50 @@
     .thumbs { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .75rem; }
     .thumb { border: 1px dashed #ccc; border-radius: 10px; padding:.5rem; aspect-ratio: 1/1; display:flex; align-items:center; justify-content:center; font-size:.9rem; color:#777; }
 
+	  /* SBA SDVOSB Certification */
+.sdvosb-certification {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fafafa;
+  padding: 1.75rem 0;
+}
+
+.sdvosb-certification .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.sdvosb-badge {
+  width: 110px;
+  height: auto;
+}
+
+.sdvosb-text {
+  max-width: 520px;
+}
+
+.sdvosb-text h3 {
+  margin: 0 0 .35rem;
+  font-size: 1.25rem;
+}
+
+.sdvosb-text p {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .sdvosb-certification .wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sdvosb-badge {
+    width: 95px;
+  }
+}
     /* Footer */
     footer { color:#666; padding: 3rem 0 2rem; text-align:center; }
 	/* BRAND CAROUSEL */
@@ -554,7 +598,24 @@
     </section>
 
   </main>
+<!-- SBA SDVOSB Certification -->
+<section class="sdvosb-certification">
+  <div class="wrap">
+    <img
+      src="image/sdvosb.jpg"
+      alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
+      class="sdvosb-badge"
+    >
 
+    <div class="sdvosb-text">
+      <h3>Veteran-Owned. SBA Certified.</h3>
+      <p>
+        J &amp; A Masterpieces LLC is an SBA-certified
+        Service-Disabled Veteran-Owned Small Business (SDVOSB).
+      </p>
+    </div>
+  </div>
+</section>
   <footer>
     <div class="wrap">
       <p>© <span id="year"></span> J &amp; A Masterpieces LLC • Augusta / CSRA</p>
