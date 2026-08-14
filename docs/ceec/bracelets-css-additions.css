@@ -1,0 +1,247 @@
+/* =========================================================
+   BRACELETS PAGE
+   Append this block to the bottom of styles.css
+========================================================= */
+
+.category-hero {
+    min-height: 420px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+    background: linear-gradient(90deg, #fbf8f5 0%, #fbf8f5 44%, #eee7f7 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+.category-hero-copy {
+    align-self: center;
+    padding: 4.5rem 5vw;
+}
+
+.category-hero-copy h1 {
+    margin: 0.4rem 0 1rem;
+    font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.category-hero-copy h1 span { color: var(--lavender); }
+
+.category-hero-copy > p:not(.eyebrow) {
+    max-width: 520px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.category-hero-image {
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.category-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-toolbar {
+    min-height: 66px;
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: center;
+    padding: 0 5vw;
+    border-bottom: 1px solid var(--border);
+    background: white;
+}
+
+.filter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product-count {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+}
+
+.sort-control span { color: var(--muted); }
+
+.sort-control select {
+    width: auto;
+    padding: 0.45rem 2rem 0.45rem 0.6rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bracelet-shop-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 1.8rem;
+    padding: 1.5rem 5vw 4rem;
+}
+
+.shop-filters {
+    padding-right: 1.3rem;
+    border-right: 1px solid var(--border);
+}
+
+.filter-group {
+    padding: 0.4rem 0 1.6rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-group:last-child { border-bottom: 0; }
+
+.filter-group h2 {
+    margin: 0 0 0.85rem;
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.filter-group a,
+.filter-group label {
+    display: block;
+    margin: 0.4rem 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.filter-group a:hover,
+.filter-group .active-filter { color: var(--lavender-dark); }
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] { width: auto; }
+.filter-group p { color: var(--muted); font-size: 0.9rem; }
+.text-link { color: var(--lavender-dark) !important; font-weight: 700; }
+
+.bracelet-products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.6rem 1rem;
+}
+
+.product-card { min-width: 0; }
+
+.product-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--cream);
+    border-radius: 12px;
+}
+
+.product-image-link img {
+    width: 100%;
+    aspect-ratio: 1 / 0.88;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image-link img { transform: scale(1.025); }
+
+.product-badge {
+    position: absolute;
+    left: 0.7rem;
+    top: 0.7rem;
+    padding: 0.3rem 0.55rem;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 999px;
+    color: var(--lavender-dark);
+    font-size: 0.68rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(42, 31, 65, 0.08);
+}
+
+.product-badge.limited {
+    color: #8d586d;
+    background: rgba(255, 244, 249, 0.94);
+}
+
+.product-card-copy { padding: 0.75rem 0.25rem 0; }
+
+.product-card-copy h2 {
+    margin: 0;
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 1rem;
+}
+
+.product-card-copy h2 a:hover { color: var(--lavender-dark); }
+.product-price { margin: 0.2rem 0; font-weight: 700; }
+.product-meta { margin: 0; color: var(--muted); font-size: 0.78rem; }
+
+.bracelet-custom-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 7vw;
+    background: linear-gradient(90deg, #eee4f7, #f7f2fa, #eee4f7);
+}
+
+.bracelet-custom-cta h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.bracelet-custom-cta p:not(.eyebrow) { margin-bottom: 0; color: var(--muted); }
+
+.footer-brand > .brand { height: auto; }
+.footer-brand > .brand .logo { width: 90px; height: 90px; }
+
+@media (max-width: 1100px) {
+    .bracelet-products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 780px) {
+    .category-hero { grid-template-columns: 1fr; }
+    .category-hero-copy { padding: 3.5rem 1.25rem 2rem; }
+    .category-hero-image { min-height: 300px; }
+
+    .shop-toolbar {
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+        padding: 0.8rem 1.25rem;
+    }
+
+    .product-count { display: none; }
+
+    .bracelet-shop-layout {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .shop-filters { display: none; }
+    .bracelet-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem 0.8rem; }
+
+    .bracelet-custom-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bracelet-products { grid-template-columns: 1fr; }
+    .sort-control span { display: none; }
+}

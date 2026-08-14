@@ -1,0 +1,274 @@
+/* =========================================================
+   ARTWORK PAGE
+========================================================= */
+
+.art-hero {
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fbf8f5 0%,
+            #fbf8f5 43%,
+            #eee8f6 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.art-hero-copy {
+    align-self: center;
+    padding: 4.5rem 5vw;
+}
+
+.art-hero-copy h1 {
+    margin: 0.4rem 0 1rem;
+    font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.art-hero-copy h1 span {
+    color: var(--lavender);
+}
+
+.art-hero-copy > p:not(.eyebrow) {
+    max-width: 530px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.art-hero-image {
+    min-height: 430px;
+    overflow: hidden;
+}
+
+.art-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Intro */
+
+.art-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 3rem 7vw;
+
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.art-intro h2 {
+    margin: 0.35rem 0 0;
+}
+
+.art-intro p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0;
+    color: var(--muted);
+}
+
+
+/* Shop */
+
+.art-shop {
+    padding: 3rem 5vw 4rem;
+}
+
+.art-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.art-section-heading h2 {
+    margin: 0.3rem 0 0;
+}
+
+.art-section-heading > p {
+    max-width: 420px;
+    margin: 0 0 0.35rem;
+
+    color: var(--muted);
+    text-align: right;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.3rem;
+}
+
+.art-card {
+    overflow: hidden;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(42, 31, 65, 0.12);
+}
+
+.art-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.art-image-link img {
+    width: 100%;
+    aspect-ratio: 1 / 0.9;
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+}
+
+.art-card:hover .art-image-link img {
+    transform: scale(1.025);
+}
+
+.art-badge {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+
+    padding: 0.35rem 0.65rem;
+
+    border-radius: 999px;
+
+    color: var(--lavender-dark);
+    background: rgba(255, 255, 255, 0.92);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.art-card-copy {
+    padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.art-card-copy h3 {
+    margin: 0 0 0.35rem;
+}
+
+.art-card-copy p {
+    margin: 0 0 0.8rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.art-card-copy span {
+    font-weight: 700;
+}
+
+
+/* Market-first note */
+
+.market-first-art {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 3rem 7vw;
+
+    background:
+        linear-gradient(
+            90deg,
+            #eee4f7,
+            #faf7fc,
+            #f1e8f5
+        );
+}
+
+.market-first-art > div {
+    max-width: 720px;
+}
+
+.market-first-art h2 {
+    margin: 0.35rem 0 0.6rem;
+}
+
+.market-first-art p:not(.eyebrow) {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+
+/* Footer */
+
+.footer-brand > .brand {
+    height: auto;
+}
+
+.footer-brand > .brand .logo {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 780px) {
+
+    .art-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .art-hero-copy {
+        padding: 3.5rem 1.25rem 2rem;
+    }
+
+    .art-hero-image {
+        min-height: 300px;
+    }
+
+    .art-intro {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .art-shop {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .art-section-heading {
+        display: block;
+    }
+
+    .art-section-heading > p {
+        margin-top: 0.75rem;
+        text-align: left;
+    }
+
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .market-first-art {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 2.5rem 1.25rem;
+    }
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Order | CEEC by Carmen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="section">
+    <a href="index.html">← Back to home</a>
+    <h1>Custom Order Request</h1>
+    <p>This starter form reflects CEEC’s made-to-order model. Connect it to Formspree before launch.</p>
+
+    <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" class="review-card" style="max-width:760px">
+      <label for="name">Name</label>
+      <input id="name" name="name" required style="width:100%;padding:.8rem;margin:.3rem 0 1rem">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required style="width:100%;padding:.8rem;margin:.3rem 0 1rem">
+
+      <label for="product">Product type</label>
+      <select id="product" name="product" required style="width:100%;padding:.8rem;margin:.3rem 0 1rem">
+        <option value="">Choose one</option>
+        <option>Acrylic bracelet</option>
+        <option>Nylon paracord survival bracelet</option>
+        <option>Polymer clay bracelet</option>
+        <option>Other custom request</option>
+      </select>
+
+      <label for="details">Tell us what you have in mind</label>
+      <textarea id="details" name="details" rows="6" required style="width:100%;padding:.8rem;margin:.3rem 0 1rem"></textarea>
+
+      <button class="button primary" type="submit">Submit request</button>
+    </form>
+  </main>
+</body>
+</html>

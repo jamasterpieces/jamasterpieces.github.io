@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share your experience with a CEEC by Carmen creation." />
+  <title>Leave a Review | CEEC by Carmen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="review-css-additions.css" />
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">
+    <span>♡ Handmade with heart by Carmen</span>
+    <span aria-hidden="true">✦</span>
+    <span>Thank you for supporting a young artist!</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CEEC Home">
+      <img src="assets/circlelogo.png" alt="CEEC by Carmen" class="logo">
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Toggle navigation</span>
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html#shop">Shop</a>
+      <a href="orderform.html">Custom Orders</a>
+      <a href="index.html#reviews" aria-current="page">Reviews</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#events">Events</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions" aria-label="Shopping tools">
+      <button type="button" aria-label="Search">⌕</button>
+      <button type="button" aria-label="Shopping bag">♧</button>
+    </div>
+  </header>
+
+
+  <main id="main">
+
+    <section class="review-form-hero">
+      <p class="eyebrow">THANK YOU FOR SUPPORTING CEEC</p>
+      <h1>Tell us what you think. <span>♡</span></h1>
+      <p>
+        Whether you found CEEC at a market, received a creation as a gift,
+        or picked something out for yourself, Carmen would love to hear from you.
+      </p>
+    </section>
+
+
+    <section class="review-form-section">
+
+      <div class="review-form-card">
+
+        <div class="review-form-heading">
+          <h2>Leave a Review</h2>
+          <p>
+            Fields marked with <span aria-hidden="true">*</span> are required.
+          </p>
+        </div>
+
+        <form
+          class="ceec-review-form"
+          action="https://formspree.io/f/xgawzbpq"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+
+          <input type="hidden" name="_subject" value="New CEEC Customer Review">
+
+          <div class="form-field">
+            <label for="review-name">
+              Display name <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+              id="review-name"
+              name="display_name"
+              type="text"
+              autocomplete="name"
+              placeholder="Example: Madison R."
+              maxlength="60"
+              required
+            >
+
+            <small>
+              This is the name that may appear with your review. First name and
+              last initial work perfectly.
+            </small>
+          </div>
+
+
+          <div class="form-field">
+            <label for="review-product">
+              What CEEC product are you reviewing? <span aria-hidden="true">*</span>
+            </label>
+
+            <select id="review-product" name="product" required>
+              <option value="" selected disabled>Select a product</option>
+              <option value="Bracelet">Bracelet</option>
+              <option value="Candle">Candle</option>
+              <option value="Artwork">Artwork</option>
+              <option value="Keychain">Keychain</option>
+              <option value="Pull Tab">Pull Tab</option>
+              <option value="Other CEEC Creation">Other CEEC Creation</option>
+            </select>
+          </div>
+
+
+          <fieldset class="form-field">
+            <legend>
+              How did you get your CEEC creation? <span aria-hidden="true">*</span>
+            </legend>
+
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="received_via" value="Market" required>
+                <span>Market</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="received_via" value="Direct Purchase">
+                <span>Direct Purchase</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="received_via" value="Gift">
+                <span>Gift</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="received_via" value="Other">
+                <span>Other</span>
+              </label>
+            </div>
+          </fieldset>
+
+
+          <fieldset class="form-field rating-field">
+            <legend>
+              Your rating <span aria-hidden="true">*</span>
+            </legend>
+
+            <div class="rating-options" aria-label="Choose a rating from 1 to 5 stars">
+
+              <label>
+                <input type="radio" name="rating" value="5" required>
+                <span aria-label="5 stars">★★★★★</span>
+                <small>5</small>
+              </label>
+
+              <label>
+                <input type="radio" name="rating" value="4">
+                <span aria-label="4 stars">★★★★☆</span>
+                <small>4</small>
+              </label>
+
+              <label>
+                <input type="radio" name="rating" value="3">
+                <span aria-label="3 stars">★★★☆☆</span>
+                <small>3</small>
+              </label>
+
+              <label>
+                <input type="radio" name="rating" value="2">
+                <span aria-label="2 stars">★★☆☆☆</span>
+                <small>2</small>
+              </label>
+
+              <label>
+                <input type="radio" name="rating" value="1">
+                <span aria-label="1 star">★☆☆☆☆</span>
+                <small>1</small>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="form-field">
+            <label for="review-text">
+              Your review <span aria-hidden="true">*</span>
+            </label>
+
+            <textarea
+              id="review-text"
+              name="review"
+              rows="6"
+              maxlength="1200"
+              placeholder="What did you like about your CEEC creation?"
+              required
+            ></textarea>
+
+            <small>
+              A few sentences are plenty. Maximum 1,200 characters.
+            </small>
+          </div>
+
+
+          <div class="form-field photo-field">
+            <label for="review-photo">
+              Product photo <span class="optional-label">Optional</span>
+            </label>
+
+            <input
+              id="review-photo"
+              name="product_photo"
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+            >
+
+            <small>
+              Want to show off your CEEC creation? Product-only photos are
+              welcome. Please avoid including people or personal information
+              unless you are comfortable with the image potentially being shared.
+            </small>
+          </div>
+
+
+          <div class="form-field consent-field">
+            <label class="consent-box">
+              <input
+                type="checkbox"
+                name="permission_to_share"
+                value="Yes"
+                required
+              >
+
+              <span>
+                I give CEEC permission to display my review and any photo I
+                voluntarily submit on the CEEC website, social media, and other
+                CEEC promotional materials. <strong>*</strong>
+              </span>
+            </label>
+          </div>
+
+
+          <div class="review-submit-area">
+            <button class="button primary review-submit" type="submit">
+              Submit Review ♡
+            </button>
+
+            <p>
+              Reviews may be checked before appearing publicly.
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+
+
+      <aside class="review-thank-you-card">
+        <div class="review-heart" aria-hidden="true">♡</div>
+
+        <h2>Your feedback matters.</h2>
+
+        <p>
+          Every review helps people discover Carmen's work and helps her learn
+          what customers enjoy most.
+        </p>
+
+        <p class="review-thank-you-note">
+          Thank you for taking a minute to support a young entrepreneur.
+        </p>
+
+        <a href="index.html#reviews">Read customer reviews →</a>
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <footer id="contact" class="site-footer">
+
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="CEEC Home">
+        <img src="assets/circlelogo.png" alt="CEEC by Carmen" class="logo">
+      </a>
+      <p>Handmade with heart in Georgia, USA ♡</p>
+    </div>
+
+    <div>
+      <h3>Shop</h3>
+      <a href="index.html#shop">All Products</a>
+      <a href="bracelets.html">Bracelets</a>
+      <a href="candles.html">Candles</a>
+      <a href="artwork.html">Artwork</a>
+      <a href="accessories.html">Accessories</a>
+    </div>
+
+    <div>
+      <h3>Custom Orders</h3>
+      <a href="orderform.html">Order Form</a>
+      <a href="#">Bracelet Guide</a>
+      <a href="#">Sizing Guide</a>
+    </div>
+
+    <div>
+      <h3>Help</h3>
+      <a href="index.html#faq">FAQ</a>
+      <a href="#">Shipping & Returns</a>
+      <a href="mailto:jamasterpieces@gmail.com">Contact</a>
+    </div>
+
+    <div class="footer-note">
+      <p>Thank you for supporting CEEC ♡</p>
+      <p>© <span id="year"></span> CEEC by Carmen</p>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

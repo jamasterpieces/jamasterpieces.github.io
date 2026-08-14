@@ -1,0 +1,248 @@
+/* =========================================================
+   CANDLES PAGE
+========================================================= */
+
+.candle-hero {
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fbf8f5 0%,
+            #fbf8f5 45%,
+            #efe5df 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.candle-hero-copy {
+    align-self: center;
+    padding: 4.5rem 5vw;
+}
+
+.candle-hero-copy h1 {
+    margin: 0.4rem 0 1rem;
+    font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.candle-hero-copy h1 span {
+    color: var(--lavender);
+}
+
+.candle-hero-copy > p:not(.eyebrow) {
+    max-width: 520px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.candle-hero-image {
+    min-height: 430px;
+    overflow: hidden;
+}
+
+.candle-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Collection introduction */
+
+.candle-story {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 3rem 7vw;
+
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.candle-story h2 {
+    margin: 0.35rem 0 0;
+}
+
+.candle-story p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+
+/* Candle shop layout */
+
+.candle-shop-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 1.8rem;
+
+    padding: 1.5rem 5vw 4rem;
+}
+
+.candle-products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.8rem 1.1rem;
+}
+
+.candle-product-card {
+    min-width: 0;
+}
+
+.candle-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    background: var(--cream);
+    border-radius: 12px;
+}
+
+.candle-image-link img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+}
+
+.candle-product-card:hover .candle-image-link img {
+    transform: scale(1.025);
+}
+
+
+/* Candle care */
+
+.candle-care {
+    padding: 3.5rem 7vw;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f6f0f8,
+            #fbf8f5,
+            #f3e9e4
+        );
+}
+
+.candle-care > div:first-child {
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.candle-care h2 {
+    margin: 0.35rem 0;
+}
+
+.candle-care-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.candle-care-grid article {
+    padding: 1.5rem;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(222, 216, 231, 0.75);
+    border-radius: 14px;
+}
+
+.candle-care-grid h3 {
+    margin-top: 0;
+}
+
+.candle-care-grid p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+
+/* Footer logo sizing */
+
+.footer-brand > .brand {
+    height: auto;
+}
+
+.footer-brand > .brand .logo {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .candle-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 780px) {
+
+    .candle-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .candle-hero-copy {
+        padding: 3.5rem 1.25rem 2rem;
+    }
+
+    .candle-hero-image {
+        min-height: 300px;
+    }
+
+
+    .candle-story {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        padding: 2.5rem 1.25rem;
+    }
+
+
+    .candle-shop-layout {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .candle-shop-layout .shop-filters {
+        display: none;
+    }
+
+    .candle-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem 0.8rem;
+    }
+
+
+    .candle-care {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .candle-care-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .candle-products {
+        grid-template-columns: 1fr;
+    }
+
+}
