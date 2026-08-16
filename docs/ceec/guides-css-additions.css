@@ -1,0 +1,95 @@
+/* =========================================================
+   CEEC GUIDE PAGES
+========================================================= */
+
+.guide-hero {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 7vw;
+    background: linear-gradient(135deg, #fbf8f5 0%, #f5eef9 60%, #f0e7f5 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+.guide-hero-copy { max-width: 760px; }
+.guide-hero-copy h1 { margin: 0.4rem 0 1rem; font-size: clamp(3rem, 5vw, 5rem); }
+.guide-hero-copy h1 span { color: var(--lavender); }
+.guide-hero-copy > p:not(.eyebrow) { max-width: 650px; color: var(--muted); font-size: 1.05rem; }
+
+.guide-hero-card {
+    padding: 2rem;
+    background: rgba(255,255,255,.82);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+.guide-hero-card h2 { margin: .35rem 0 .75rem; }
+.guide-hero-card p:not(.eyebrow) { color: var(--muted); }
+
+.guide-section, .guide-comparison, .fit-preference { padding: 3.5rem 7vw; }
+.guide-heading { max-width: 760px; margin-bottom: 1.8rem; }
+.guide-heading h2 { margin: .35rem 0 .5rem; }
+.guide-intro-note { color: var(--muted); }
+
+.bracelet-type-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.bracelet-type-card {
+    padding: 1.7rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+.bracelet-type-card h3 { margin: 0 0 .35rem; }
+.guide-kicker { margin: 0 0 .8rem; color: var(--lavender-dark); font-size: .8rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; }
+.bracelet-type-card > p:not(.guide-kicker):not(.guide-note) { color: var(--muted); }
+.bracelet-type-card dl { margin: 1rem 0 0; }
+.bracelet-type-card dl > div { display: grid; grid-template-columns: 110px 1fr; gap: .75rem; padding: .55rem 0; border-top: 1px solid var(--border); }
+.bracelet-type-card dt { font-weight: 700; }
+.bracelet-type-card dd { margin: 0; color: var(--muted); }
+
+.guide-note { margin-top: 1rem; padding: .85rem 1rem; border-left: 3px solid var(--lavender); background: var(--lavender-soft); color: var(--muted); font-size: .85rem; }
+
+.guide-comparison { background: var(--cream); }
+.comparison-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; background: white; }
+.guide-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.guide-table th, .guide-table td { padding: .95rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+.guide-table th { background: #f7f2fa; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+.guide-table td { color: var(--muted); }
+.guide-table td:first-child { color: var(--ink); font-weight: 700; }
+
+.measure-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.measure-step { padding: 1.6rem; background: white; border: 1px solid var(--border); border-radius: 14px; }
+.measure-step > span { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: .8rem; border-radius: 50%; background: var(--lavender-soft); color: var(--lavender-dark); font-weight: 800; }
+.measure-step h3 { margin: 0 0 .4rem; }
+.measure-step p { margin-bottom: 0; color: var(--muted); }
+
+.fit-preference { background: linear-gradient(90deg, #f6f0f8, #fbf8f5, #f4edf7); }
+.fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.fit-grid article { padding: 1.5rem; background: rgba(255,255,255,.78); border: 1px solid var(--border); border-radius: 14px; }
+.fit-grid h3 { margin-top: 0; }
+.fit-grid p { margin-bottom: 0; color: var(--muted); }
+
+.guide-callout, .guide-cta { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.guide-callout > div, .guide-cta > div { max-width: 760px; }
+.guide-callout h2, .guide-cta h2 { margin: .35rem 0 .55rem; }
+.guide-callout p:not(.eyebrow), .guide-cta p:not(.eyebrow) { color: var(--muted); }
+.guide-cta { padding: 3rem 7vw; background: linear-gradient(90deg, #eee4f7, #faf7fc, #eee4f7); }
+
+.parent-brand { margin-top: .35rem; color: var(--muted); font-size: .75rem; letter-spacing: .04em; }
+
+.instagram-follow-link { display: inline-block; }
+.instagram-follow-img { display: block; width: 44px; height: auto; transition: transform .2s ease, opacity .2s ease; }
+.instagram-follow-link:hover .instagram-follow-img,
+.instagram-follow-link:focus-visible .instagram-follow-img { transform: translateY(-2px); opacity: .86; }
+
+@media (max-width: 850px) {
+    .guide-hero { grid-template-columns: 1fr; padding: 3rem 1.25rem; }
+    .guide-section, .guide-comparison, .fit-preference { padding: 2.5rem 1.25rem; }
+    .bracelet-type-grid, .measure-steps, .fit-grid { grid-template-columns: 1fr; }
+    .guide-callout, .guide-cta { flex-direction: column; align-items: flex-start; padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+@media (max-width: 520px) {
+    .bracelet-type-card dl > div { grid-template-columns: 1fr; gap: .2rem; }
+}

@@ -768,6 +768,23 @@ summary {
     font-weight: 700;
 }
 
+.instagram-follow-link {
+    display: inline-block;
+}
+
+.instagram-follow-img {
+    display: block;
+    width: 44px;
+    height: auto;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.instagram-follow-link:hover .instagram-follow-img,
+.instagram-follow-link:focus-visible .instagram-follow-img {
+    transform: translateY(-2px);
+    opacity: .86;
+}
+
 /* =========================
    FORMS
 ========================= */
