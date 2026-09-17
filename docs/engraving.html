@@ -221,6 +221,33 @@
                 padding: .55rem .35rem;
             }
         }
+		/* Engraving Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery-grid figure {
+    margin: 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
     </style>
 </head>
 
@@ -242,8 +269,42 @@
     </header>
 
     <main class="wrap">
-        <section id="process" class="card">
-            <h2>How It Works</h2>
+	<!-- Engraving Gallery -->
+<section id="gallery" class="card">
+    <h2>See What We Can Create</h2>
+    <p class="kicker">
+        From personalized gifts to custom branding and one-of-a-kind projects,
+        every engraving starts with an idea.
+    </p>
+
+    <div class="gallery-grid">
+        <figure>
+            <img src="image/precision/engraving1.jpg"
+                 alt="Custom laser engraving project by J &amp; A Masterpieces"
+                 loading="lazy">
+        </figure>
+
+        <figure>
+            <img src="image/precision/engraving2.jpg"
+                 alt="Personalized laser engraving by J &amp; A Masterpieces"
+                 loading="lazy">
+        </figure>
+
+        <figure>
+            <img src="image/precision/engraving3.jpg"
+                 alt="Custom engraved project by J &amp; A Masterpieces"
+                 loading="lazy">
+        </figure>
+
+        <figure>
+            <img src="image/precision/engraving4.jpg"
+                 alt="Laser engraved custom work by J &amp; A Masterpieces"
+                 loading="lazy">
+        </figure>
+    </div>
+</section>	
+<section id="process" class="card section-space">
+	<h2>How It Works</h2>
 
             <div class="steps">
                 <div class="step">
